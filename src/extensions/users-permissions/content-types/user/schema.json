@@ -63,11 +63,20 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "school": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::school.school",
-      "inversedBy": "users_permissions_users"
+    "address": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "mobileNumber": {
+      "type": "string"
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "occupation": {
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "institutions",
+  "info": {
+    "singularName": "institution",
+    "pluralName": "institutions",
+    "displayName": "institution",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "institutionName": {
+      "type": "string"
+    },
+    "institutionCode": {
+      "type": "string"
+    },
+    "institutionDescription": {
+      "type": "string"
+    }
+  }
+}
