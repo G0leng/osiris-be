@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alumni",
+  "info": {
+    "singularName": "alumnus",
+    "pluralName": "alumni",
+    "displayName": "alumnus"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -20,6 +20,52 @@
     },
     "institutionDescription": {
       "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "profilePicture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "mission": {
+      "type": "text"
+    },
+    "vision": {
+      "type": "text"
+    },
+    "values": {
+      "type": "text"
+    },
+    "history": {
+      "type": "text"
+    },
+    "locationMap": {
+      "type": "json"
+    },
+    "alumni": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::alumnus.alumnus"
+    },
+    "branches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::branch.branch",
+      "mappedBy": "institution"
     }
   }
 }
