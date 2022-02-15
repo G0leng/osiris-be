@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educational_levels",
+  "info": {
+    "singularName": "educational-level",
+    "pluralName": "educational-levels",
+    "displayName": "educationalLevel"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "educationalLevelName": {
+      "type": "string"
+    },
+    "educationalLevelCode": {
+      "type": "string"
+    },
+    "educationalLevelDescription": {
+      "type": "string"
+    },
+    "educationalPrecedence": {
+      "type": "integer"
+    },
+    "isSemestral": {
+      "type": "boolean"
+    }
+  }
+}

@@ -26,6 +26,24 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::branch.branch"
+    },
+    "exams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::exam.exam",
+      "inversedBy": "applicants"
+    },
+    "interviews": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::interview.interview",
+      "inversedBy": "applicants"
+    },
+    "interviewNotes": {
+      "type": "text"
+    },
+    "admissionStatus": {
+      "type": "boolean"
     }
   }
 }

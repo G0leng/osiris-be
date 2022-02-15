@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programs",
+  "info": {
+    "singularName": "program",
+    "pluralName": "programs",
+    "displayName": "program"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "programName": {
+      "type": "string"
+    },
+    "programCode": {
+      "type": "string"
+    },
+    "programDescription": {
+      "type": "string"
+    },
+    "majorSpecialization": {
+      "type": "string"
+    }
+  }
+}

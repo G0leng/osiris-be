@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exams",
+  "info": {
+    "singularName": "exam",
+    "pluralName": "exams",
+    "displayName": "exam"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "examTopic": {
+      "type": "string"
+    },
+    "examCode": {
+      "type": "string"
+    },
+    "examDescription": {
+      "type": "string"
+    },
+    "perfectScore": {
+      "type": "decimal"
+    },
+    "passingScore": {
+      "type": "decimal"
+    },
+    "sequence": {
+      "type": "integer"
+    },
+    "applicants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::applicant.applicant",
+      "mappedBy": "exams"
+    }
+  }
+}
