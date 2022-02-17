@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-02-15T03:32:22.804Z"
+    "x-generation-date": "2022-02-17T19:30:44.707Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2871,6 +2871,9 @@
                                           "occupation": {
                                             "type": "string"
                                           },
+                                          "approved": {
+                                            "type": "boolean"
+                                          },
                                           "createdAt": {
                                             "type": "string",
                                             "format": "date-time"
@@ -5049,6 +5052,9 @@
                                         },
                                         "occupation": {
                                           "type": "string"
+                                        },
+                                        "approved": {
+                                          "type": "boolean"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -7241,6 +7247,9 @@
                                         "occupation": {
                                           "type": "string"
                                         },
+                                        "approved": {
+                                          "type": "boolean"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -9328,6 +9337,9 @@
                                         },
                                         "occupation": {
                                           "type": "string"
+                                        },
+                                        "approved": {
+                                          "type": "boolean"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -22727,6 +22739,9 @@
                                                         "occupation": {
                                                           "type": "string"
                                                         },
+                                                        "approved": {
+                                                          "type": "boolean"
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
@@ -24849,6 +24864,9 @@
                                                       "occupation": {
                                                         "type": "string"
                                                       },
+                                                      "approved": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -26950,6 +26968,9 @@
                                                       "occupation": {
                                                         "type": "string"
                                                       },
+                                                      "approved": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -28980,6 +29001,9 @@
                                                       },
                                                       "occupation": {
                                                         "type": "string"
+                                                      },
+                                                      "approved": {
+                                                        "type": "boolean"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -40743,6 +40767,9 @@
                                                         "occupation": {
                                                           "type": "string"
                                                         },
+                                                        "approved": {
+                                                          "type": "boolean"
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
@@ -42851,6 +42878,9 @@
                                                       "occupation": {
                                                         "type": "string"
                                                       },
+                                                      "approved": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -44924,6 +44954,9 @@
                                                       "occupation": {
                                                         "type": "string"
                                                       },
+                                                      "approved": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -46940,6 +46973,9 @@
                                                       },
                                                       "occupation": {
                                                         "type": "string"
+                                                      },
+                                                      "approved": {
+                                                        "type": "boolean"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",

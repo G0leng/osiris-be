@@ -512,6 +512,9 @@
                                                         "occupation": {
                                                           "type": "string"
                                                         },
+                                                        "approved": {
+                                                          "type": "boolean"
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
@@ -2620,6 +2623,9 @@
                                                       "occupation": {
                                                         "type": "string"
                                                       },
+                                                      "approved": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -4693,6 +4699,9 @@
                                                       "occupation": {
                                                         "type": "string"
                                                       },
+                                                      "approved": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -6709,6 +6718,9 @@
                                                       },
                                                       "occupation": {
                                                         "type": "string"
+                                                      },
+                                                      "approved": {
+                                                        "type": "boolean"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
