@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
-    },
     "institution": {
       "type": "relation",
       "relation": "oneToOne",
@@ -29,21 +24,44 @@
     },
     "exams": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::exam.exam",
-      "inversedBy": "applicants"
+      "mappedBy": "applicant"
     },
     "interviews": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::interview.interview",
-      "inversedBy": "applicants"
+      "mappedBy": "applicant"
     },
     "interviewNotes": {
       "type": "text"
     },
     "admissionStatus": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
+    },
+    "guardian": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "applicants"
+    },
+    "name": {
+      "type": "string"
+    },
+    "credentials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::credential.credential"
+    },
+    "program": {
+      "type": "enumeration",
+      "enum": [
+        "gradeSchool",
+        "juniorHighSchool",
+        "seniorHighSchool"
+      ]
     }
   }
 }

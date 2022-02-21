@@ -17,9 +17,9 @@
     "interviewAnswer": {
       "type": "string"
     },
-    "applicants": {
+    "applicant": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::applicant.applicant",
       "inversedBy": "interviews"
     }

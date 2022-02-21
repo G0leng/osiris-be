@@ -81,6 +81,12 @@
     "approved": {
       "type": "boolean",
       "default": false
+    },
+    "applicants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::applicant.applicant",
+      "mappedBy": "guardian"
     }
   }
 }

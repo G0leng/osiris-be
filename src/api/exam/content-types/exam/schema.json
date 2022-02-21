@@ -29,11 +29,11 @@
     "sequence": {
       "type": "integer"
     },
-    "applicants": {
+    "applicant": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::applicant.applicant",
-      "mappedBy": "exams"
+      "inversedBy": "exams"
     }
   }
 }
