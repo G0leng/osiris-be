@@ -5,19 +5,17 @@
  */
 
 module.exports = {
-    sendEmail: async (to, subject, html) => {
-        const email = ctx.request.body.emailAddress;
-        const body = ctx.request.body.emailBody;
-        await strapi.plugins['email'].services.email.send({
+    sendEmail: async (to,  subject, html) => {
+        console.log("Sending email", html)
+        strapi.plugins['email'].services.email.send({
             to,
-            from: 'support@headstartsolutionsph.com',
-            replyTo: 'support@headstartsolutionsph.com',
+            cc:DEFAULT_CC,
+            from: DEFAULT_FROM,
+            replyTo: DEFAULT_FROM, 
             subject,
             html
         });
-        await ctx.send({
-            message: "email sent from post request"
-        })
+        console.log("Email sent")
+        return {message: 'Email sent'}
     }
-
 };

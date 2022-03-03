@@ -15,15 +15,16 @@ module.exports = ({ env }) => ({
         },
         email: {
             config: {
-              provider: 'strapi-provider-email-sendinblue',
+              provider: 'sendgrid',
               providerOptions: {
-                sendinblue_api_key: env('SIB_API_KEY', 'xkeysib-ecb8d48734cf806be9d52ce303abceb170c15fa01d2212d1bfcb41f502d8d888-X8DQWCYJMKNLESVkxkeysib-ecb8d48734cf806be9d52ce303abceb170c15fa01d2212d1bfcb41f502d8d888-X8DQWCYJMKNLESVk'),
-                sendinblue_default_replyto: env('SIB_DEFAULT_REPLY_TO', 'support@headstartsolutionsph.com'),
-                sendinblue_default_from: env('SIB_DEFAULT_FROM', 'support@headstartsolutionsph.com'),
-                sendinblue_default_from_name: env('SIB_DEFAULT_FROM_NAME', 'Support'),
+                  apiKey: env('SENDGRID_API_KEY'),
+              },
+              settings: {
+                  defaultFrom: env('SENDGRID_DEFAULT_FROM', 'support@headstartsolutionsph.com'),
+                  defaultReplyTo: env('SENDGRID_DEFAULT_REPLY_TO', 'support@headstartsolutionsph.com'),
               },
             },
           },
-    }
+      }
     });
     

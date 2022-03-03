@@ -87,6 +87,15 @@
       "relation": "oneToMany",
       "target": "api::applicant.applicant",
       "mappedBy": "guardian"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "middleName": {
+      "type": "string"
     }
   }
 }

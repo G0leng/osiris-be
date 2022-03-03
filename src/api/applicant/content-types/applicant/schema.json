@@ -47,9 +47,6 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "applicants"
     },
-    "name": {
-      "type": "string"
-    },
     "credentials": {
       "type": "relation",
       "relation": "oneToMany",
@@ -62,6 +59,27 @@
         "juniorHighSchool",
         "seniorHighSchool"
       ]
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "middleName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "gradeLevel": {
+      "type": "string"
+    },
+    "profilePicture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
