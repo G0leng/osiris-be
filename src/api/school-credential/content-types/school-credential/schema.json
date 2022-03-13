@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "school_credentials",
+  "info": {
+    "singularName": "school-credential",
+    "pluralName": "school-credentials",
+    "displayName": "schoolCredential"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "credentialName": {
+      "type": "string"
+    },
+    "credentialImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "isVerified": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
