@@ -120,14 +120,14 @@ module.exports = (plugin) => {
         "plugin::users-permissions.user",
         id,
         {
-          populate: { role: true, books: true, reservations: true },
+          populate: { role: true, applicants: true, books: true, reservations: true },
         }
       );
       const userId = user.id;
       const roleId = user.role.id;
       delete user.id;
       delete user.role.id;
-      //console.log('user = ', user);
+      console.log('user = ', user);
       return {
         data: {
           id: userId,
@@ -164,7 +164,7 @@ module.exports = (plugin) => {
         data
       );
       strapi.plugins['email'].services.email.send({
-        to:"gailesarmiento@gmail.com",
+        to: data.email,
         from: "support@headstartsolutionsph.com",
         templateId:"d-8189fab8af8f4bedb04e6fb4212f1db6",
         replyTo: "support@headstartsolutionsph.com", 

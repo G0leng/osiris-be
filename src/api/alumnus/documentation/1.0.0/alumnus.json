@@ -4,6 +4,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -583,11 +584,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/alumni"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1063,6 +1065,7 @@
           "Alumnus"
         ],
         "parameters": [],
+        "operationId": "post/alumni",
         "requestBody": {
           "required": true,
           "content": {
@@ -1122,6 +1125,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1608,11 +1612,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/alumni/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2099,6 +2104,7 @@
             }
           }
         ],
+        "operationId": "put/alumni/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -2156,6 +2162,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2326,7 +2333,7 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/alumni/{id}"
       }
     }
   }

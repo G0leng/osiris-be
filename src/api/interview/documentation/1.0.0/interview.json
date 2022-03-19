@@ -4,6 +4,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2594,11 +2595,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/interviews"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5085,6 +5087,7 @@
           "Interview"
         ],
         "parameters": [],
+        "operationId": "post/interviews",
         "requestBody": {
           "required": true,
           "content": {
@@ -5154,6 +5157,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -7651,11 +7655,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/interviews/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10153,6 +10158,7 @@
             }
           }
         ],
+        "operationId": "put/interviews/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -10220,6 +10226,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10390,7 +10397,7 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/interviews/{id}"
       }
     }
   }

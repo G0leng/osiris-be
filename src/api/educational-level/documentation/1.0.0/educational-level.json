@@ -4,6 +4,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -591,11 +592,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/educational-levels"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1079,6 +1081,7 @@
           "Educational-level"
         ],
         "parameters": [],
+        "operationId": "post/educational-levels",
         "requestBody": {
           "required": true,
           "content": {
@@ -1146,6 +1149,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1640,11 +1644,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/educational-levels/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2139,6 +2144,7 @@
             }
           }
         ],
+        "operationId": "put/educational-levels/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -2204,6 +2210,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2374,7 +2381,7 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/educational-levels/{id}"
       }
     }
   }

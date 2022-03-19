@@ -4,6 +4,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2608,11 +2609,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/exams"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5113,6 +5115,7 @@
           "Exam"
         ],
         "parameters": [],
+        "operationId": "post/exams",
         "requestBody": {
           "required": true,
           "content": {
@@ -5196,6 +5199,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -7707,11 +7711,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/exams/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10223,6 +10228,7 @@
             }
           }
         ],
+        "operationId": "put/exams/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -10304,6 +10310,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10474,7 +10481,7 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/exams/{id}"
       }
     }
   }

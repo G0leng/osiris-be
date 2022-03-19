@@ -4,6 +4,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -588,11 +589,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/programs"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1073,6 +1075,7 @@
           "Program"
         ],
         "parameters": [],
+        "operationId": "post/programs",
         "requestBody": {
           "required": true,
           "content": {
@@ -1137,6 +1140,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1628,11 +1632,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/programs/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2124,6 +2129,7 @@
             }
           }
         ],
+        "operationId": "put/programs/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -2186,6 +2192,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2356,7 +2363,7 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/programs/{id}"
       }
     }
   }
