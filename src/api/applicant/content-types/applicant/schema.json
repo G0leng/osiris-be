@@ -38,8 +38,7 @@
       "type": "text"
     },
     "admissionStatus": {
-      "type": "boolean",
-      "default": false
+      "type": "boolean"
     },
     "guardian": {
       "type": "relation",
