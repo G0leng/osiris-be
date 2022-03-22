@@ -120,7 +120,7 @@ module.exports = (plugin) => {
         "plugin::users-permissions.user",
         id,
         {
-          populate: { role: true, applicants: true, books: true, reservations: true },
+          populate: { role: true, applicants: {populate:{institution:true}}, books: true, reservations: true },
         }
       );
       const userId = user.id;
