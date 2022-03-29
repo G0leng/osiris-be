@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accounts",
+  "info": {
+    "singularName": "account",
+    "pluralName": "accounts",
+    "displayName": "account"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "applicants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::applicant.applicant",
+      "mappedBy": "account"
+    },
+    "totalFee": {
+      "type": "decimal"
+    },
+    "balance": {
+      "type": "decimal"
+    }
+  }
+}

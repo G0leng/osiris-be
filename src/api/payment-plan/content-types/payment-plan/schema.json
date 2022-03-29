@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_plans",
+  "info": {
+    "singularName": "payment-plan",
+    "pluralName": "payment-plans",
+    "displayName": "paymentPlan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "paymentPlan": {
+      "type": "enumeration",
+      "enum": [
+        "monthly",
+        "quarterly",
+        "semi",
+        "full"
+      ]
+    },
+    "frequency": {
+      "type": "integer"
+    },
+    "fee": {
+      "type": "decimal"
+    },
+    "miscellaneous": {
+      "type": "decimal"
+    }
+  }
+}

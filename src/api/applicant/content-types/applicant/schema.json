@@ -80,6 +80,18 @@
         "files",
         "videos"
       ]
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "applicants"
+    },
+    "payment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::payment.payment",
+      "inversedBy": "applicants"
     }
   }
 }

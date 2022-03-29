@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "payment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "applicants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::applicant.applicant",
+      "mappedBy": "payment"
+    },
+    "accounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::account.account"
+    },
+    "paymentDate": {
+      "type": "datetime"
+    },
+    "transactionType": {
+      "type": "enumeration",
+      "enum": [
+        "cash",
+        "card",
+        "cheque"
+      ]
+    },
+    "cashier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
