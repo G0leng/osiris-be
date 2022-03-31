@@ -81,17 +81,20 @@
         "videos"
       ]
     },
-    "account": {
+    "accounts": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::account.account",
-      "inversedBy": "applicants"
+      "relation": "oneToMany",
+      "target": "api::account.account"
     },
-    "payment": {
+    "payments": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::payment.payment",
-      "inversedBy": "applicants"
+      "relation": "oneToMany",
+      "target": "api::payment.payment"
+    },
+    "payment_plan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-plan.payment-plan"
     }
   }
 }

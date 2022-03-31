@@ -28,7 +28,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
 
     findOne: async (ctx) => {
         const id = ctx.params.id;
-        const aData = await strapi.service('api::applicant.applicant').findOne(id, {populate:{institution:true}});
+        const aData = await strapi.service('api::applicant.applicant').findOne(id, {populate:{institution:true, payment_plan:true}});
         console.log("ADTA: ", aData);
         return aData;
     }

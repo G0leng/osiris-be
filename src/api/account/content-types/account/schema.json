@@ -11,12 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "applicants": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::applicant.applicant",
-      "mappedBy": "account"
-    },
     "totalFee": {
       "type": "decimal"
     },

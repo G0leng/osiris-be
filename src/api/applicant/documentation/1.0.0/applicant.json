@@ -2223,24 +2223,44 @@
                                                             }
                                                           }
                                                         },
-                                                        "account": {
+                                                        "accounts": {
                                                           "type": "object",
                                                           "properties": {
                                                             "data": {
-                                                              "type": "object",
-                                                              "properties": {
-                                                                "id": {
-                                                                  "type": "string"
-                                                                },
-                                                                "attributes": {
-                                                                  "type": "object",
-                                                                  "properties": {
-                                                                    "applicants": {
-                                                                      "type": "object",
-                                                                      "properties": {
-                                                                        "data": {
-                                                                          "type": "array",
-                                                                          "items": {
+                                                              "type": "array",
+                                                              "items": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "attributes": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "totalFee": {
+                                                                        "type": "number",
+                                                                        "format": "float"
+                                                                      },
+                                                                      "balance": {
+                                                                        "type": "number",
+                                                                        "format": "float"
+                                                                      },
+                                                                      "createdAt": {
+                                                                        "type": "string",
+                                                                        "format": "date-time"
+                                                                      },
+                                                                      "updatedAt": {
+                                                                        "type": "string",
+                                                                        "format": "date-time"
+                                                                      },
+                                                                      "publishedAt": {
+                                                                        "type": "string",
+                                                                        "format": "date-time"
+                                                                      },
+                                                                      "createdBy": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
                                                                             "type": "object",
                                                                             "properties": {
                                                                               "id": {
@@ -2253,57 +2273,20 @@
                                                                             }
                                                                           }
                                                                         }
-                                                                      }
-                                                                    },
-                                                                    "totalFee": {
-                                                                      "type": "number",
-                                                                      "format": "float"
-                                                                    },
-                                                                    "balance": {
-                                                                      "type": "number",
-                                                                      "format": "float"
-                                                                    },
-                                                                    "createdAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "updatedAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "publishedAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "createdBy": {
-                                                                      "type": "object",
-                                                                      "properties": {
-                                                                        "data": {
-                                                                          "type": "object",
-                                                                          "properties": {
-                                                                            "id": {
-                                                                              "type": "string"
-                                                                            },
-                                                                            "attributes": {
-                                                                              "type": "object",
-                                                                              "properties": {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    },
-                                                                    "updatedBy": {
-                                                                      "type": "object",
-                                                                      "properties": {
-                                                                        "data": {
-                                                                          "type": "object",
-                                                                          "properties": {
-                                                                            "id": {
-                                                                              "type": "string"
-                                                                            },
-                                                                            "attributes": {
-                                                                              "type": "object",
-                                                                              "properties": {}
+                                                                      },
+                                                                      "updatedBy": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
                                                                             }
                                                                           }
                                                                         }
@@ -2315,7 +2298,123 @@
                                                             }
                                                           }
                                                         },
-                                                        "payment": {
+                                                        "payments": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "data": {
+                                                              "type": "array",
+                                                              "items": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "attributes": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "accounts": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
+                                                                            "type": "array",
+                                                                            "items": {
+                                                                              "type": "object",
+                                                                              "properties": {
+                                                                                "id": {
+                                                                                  "type": "string"
+                                                                                },
+                                                                                "attributes": {
+                                                                                  "type": "object",
+                                                                                  "properties": {}
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "paymentDate": {
+                                                                        "type": "string",
+                                                                        "format": "date-time"
+                                                                      },
+                                                                      "transactionType": {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                          "cash",
+                                                                          "card",
+                                                                          "cheque"
+                                                                        ]
+                                                                      },
+                                                                      "cashier": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "createdAt": {
+                                                                        "type": "string",
+                                                                        "format": "date-time"
+                                                                      },
+                                                                      "updatedAt": {
+                                                                        "type": "string",
+                                                                        "format": "date-time"
+                                                                      },
+                                                                      "publishedAt": {
+                                                                        "type": "string",
+                                                                        "format": "date-time"
+                                                                      },
+                                                                      "createdBy": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "updatedBy": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "payment_plan": {
                                                           "type": "object",
                                                           "properties": {
                                                             "data": {
@@ -2327,84 +2426,31 @@
                                                                 "attributes": {
                                                                   "type": "object",
                                                                   "properties": {
-                                                                    "applicants": {
-                                                                      "type": "object",
-                                                                      "properties": {
-                                                                        "data": {
-                                                                          "type": "array",
-                                                                          "items": {
-                                                                            "type": "object",
-                                                                            "properties": {
-                                                                              "id": {
-                                                                                "type": "string"
-                                                                              },
-                                                                              "attributes": {
-                                                                                "type": "object",
-                                                                                "properties": {}
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    },
-                                                                    "accounts": {
-                                                                      "type": "object",
-                                                                      "properties": {
-                                                                        "data": {
-                                                                          "type": "array",
-                                                                          "items": {
-                                                                            "type": "object",
-                                                                            "properties": {
-                                                                              "id": {
-                                                                                "type": "string"
-                                                                              },
-                                                                              "attributes": {
-                                                                                "type": "object",
-                                                                                "properties": {}
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    },
-                                                                    "paymentDate": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "transactionType": {
+                                                                    "paymentPlan": {
                                                                       "type": "string",
                                                                       "enum": [
-                                                                        "cash",
-                                                                        "card",
-                                                                        "cheque"
+                                                                        "monthly",
+                                                                        "quarterly",
+                                                                        "semi",
+                                                                        "full"
                                                                       ]
                                                                     },
-                                                                    "cashier": {
-                                                                      "type": "object",
-                                                                      "properties": {
-                                                                        "data": {
-                                                                          "type": "object",
-                                                                          "properties": {
-                                                                            "id": {
-                                                                              "type": "string"
-                                                                            },
-                                                                            "attributes": {
-                                                                              "type": "object",
-                                                                              "properties": {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
+                                                                    "frequency": {
+                                                                      "type": "integer"
+                                                                    },
+                                                                    "fee": {
+                                                                      "type": "number",
+                                                                      "format": "float"
+                                                                    },
+                                                                    "miscellaneous": {
+                                                                      "type": "number",
+                                                                      "format": "float"
                                                                     },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
                                                                     "updatedAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "publishedAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
@@ -2998,24 +3044,47 @@
                                   }
                                 }
                               },
-                              "account": {
+                              "accounts": {
                                 "type": "object",
                                 "properties": {
                                   "data": {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "attributes": {
-                                        "type": "object",
-                                        "properties": {}
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "string"
+                                        },
+                                        "attributes": {
+                                          "type": "object",
+                                          "properties": {}
+                                        }
                                       }
                                     }
                                   }
                                 }
                               },
-                              "payment": {
+                              "payments": {
+                                "type": "object",
+                                "properties": {
+                                  "data": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "string"
+                                        },
+                                        "attributes": {
+                                          "type": "object",
+                                          "properties": {}
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "payment_plan": {
                                 "type": "object",
                                 "properties": {
                                   "data": {
@@ -5560,24 +5629,44 @@
                                                           }
                                                         }
                                                       },
-                                                      "account": {
+                                                      "accounts": {
                                                         "type": "object",
                                                         "properties": {
                                                           "data": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                              "id": {
-                                                                "type": "string"
-                                                              },
-                                                              "attributes": {
-                                                                "type": "object",
-                                                                "properties": {
-                                                                  "applicants": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "array",
-                                                                        "items": {
+                                                            "type": "array",
+                                                            "items": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "attributes": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "totalFee": {
+                                                                      "type": "number",
+                                                                      "format": "float"
+                                                                    },
+                                                                    "balance": {
+                                                                      "type": "number",
+                                                                      "format": "float"
+                                                                    },
+                                                                    "createdAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "updatedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "publishedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "createdBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
                                                                           "type": "object",
                                                                           "properties": {
                                                                             "id": {
@@ -5590,57 +5679,20 @@
                                                                           }
                                                                         }
                                                                       }
-                                                                    }
-                                                                  },
-                                                                  "totalFee": {
-                                                                    "type": "number",
-                                                                    "format": "float"
-                                                                  },
-                                                                  "balance": {
-                                                                    "type": "number",
-                                                                    "format": "float"
-                                                                  },
-                                                                  "createdAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "updatedAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "publishedAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "createdBy": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                          "id": {
-                                                                            "type": "string"
-                                                                          },
-                                                                          "attributes": {
-                                                                            "type": "object",
-                                                                            "properties": {}
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "updatedBy": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                          "id": {
-                                                                            "type": "string"
-                                                                          },
-                                                                          "attributes": {
-                                                                            "type": "object",
-                                                                            "properties": {}
+                                                                    },
+                                                                    "updatedBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
                                                                           }
                                                                         }
                                                                       }
@@ -5652,7 +5704,123 @@
                                                           }
                                                         }
                                                       },
-                                                      "payment": {
+                                                      "payments": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "data": {
+                                                            "type": "array",
+                                                            "items": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "attributes": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "accounts": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "array",
+                                                                          "items": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "paymentDate": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "transactionType": {
+                                                                      "type": "string",
+                                                                      "enum": [
+                                                                        "cash",
+                                                                        "card",
+                                                                        "cheque"
+                                                                      ]
+                                                                    },
+                                                                    "cashier": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "createdAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "updatedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "publishedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "createdBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "updatedBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "payment_plan": {
                                                         "type": "object",
                                                         "properties": {
                                                           "data": {
@@ -5664,84 +5832,31 @@
                                                               "attributes": {
                                                                 "type": "object",
                                                                 "properties": {
-                                                                  "applicants": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "array",
-                                                                        "items": {
-                                                                          "type": "object",
-                                                                          "properties": {
-                                                                            "id": {
-                                                                              "type": "string"
-                                                                            },
-                                                                            "attributes": {
-                                                                              "type": "object",
-                                                                              "properties": {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "accounts": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "array",
-                                                                        "items": {
-                                                                          "type": "object",
-                                                                          "properties": {
-                                                                            "id": {
-                                                                              "type": "string"
-                                                                            },
-                                                                            "attributes": {
-                                                                              "type": "object",
-                                                                              "properties": {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "paymentDate": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "transactionType": {
+                                                                  "paymentPlan": {
                                                                     "type": "string",
                                                                     "enum": [
-                                                                      "cash",
-                                                                      "card",
-                                                                      "cheque"
+                                                                      "monthly",
+                                                                      "quarterly",
+                                                                      "semi",
+                                                                      "full"
                                                                     ]
                                                                   },
-                                                                  "cashier": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                          "id": {
-                                                                            "type": "string"
-                                                                          },
-                                                                          "attributes": {
-                                                                            "type": "object",
-                                                                            "properties": {}
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
+                                                                  "frequency": {
+                                                                    "type": "integer"
+                                                                  },
+                                                                  "fee": {
+                                                                    "type": "number",
+                                                                    "format": "float"
+                                                                  },
+                                                                  "miscellaneous": {
+                                                                    "type": "number",
+                                                                    "format": "float"
                                                                   },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
                                                                   },
                                                                   "updatedAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "publishedAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
                                                                   },
@@ -6335,24 +6450,47 @@
                                 }
                               }
                             },
-                            "account": {
+                            "accounts": {
                               "type": "object",
                               "properties": {
                                 "data": {
-                                  "type": "object",
-                                  "properties": {
-                                    "id": {
-                                      "type": "string"
-                                    },
-                                    "attributes": {
-                                      "type": "object",
-                                      "properties": {}
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "attributes": {
+                                        "type": "object",
+                                        "properties": {}
+                                      }
                                     }
                                   }
                                 }
                               }
                             },
-                            "payment": {
+                            "payments": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "attributes": {
+                                        "type": "object",
+                                        "properties": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "payment_plan": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -6695,18 +6833,35 @@
                         ],
                         "example": "string or id"
                       },
-                      "account": {
-                        "oneOf": [
-                          {
-                            "type": "integer"
-                          },
-                          {
-                            "type": "string"
-                          }
-                        ],
-                        "example": "string or id"
+                      "accounts": {
+                        "type": "array",
+                        "items": {
+                          "oneOf": [
+                            {
+                              "type": "integer"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ],
+                          "example": "string or id"
+                        }
                       },
-                      "payment": {
+                      "payments": {
+                        "type": "array",
+                        "items": {
+                          "oneOf": [
+                            {
+                              "type": "integer"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ],
+                          "example": "string or id"
+                        }
+                      },
+                      "payment_plan": {
                         "oneOf": [
                           {
                             "type": "integer"
@@ -8977,24 +9132,44 @@
                                                           }
                                                         }
                                                       },
-                                                      "account": {
+                                                      "accounts": {
                                                         "type": "object",
                                                         "properties": {
                                                           "data": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                              "id": {
-                                                                "type": "string"
-                                                              },
-                                                              "attributes": {
-                                                                "type": "object",
-                                                                "properties": {
-                                                                  "applicants": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "array",
-                                                                        "items": {
+                                                            "type": "array",
+                                                            "items": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "attributes": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "totalFee": {
+                                                                      "type": "number",
+                                                                      "format": "float"
+                                                                    },
+                                                                    "balance": {
+                                                                      "type": "number",
+                                                                      "format": "float"
+                                                                    },
+                                                                    "createdAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "updatedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "publishedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "createdBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
                                                                           "type": "object",
                                                                           "properties": {
                                                                             "id": {
@@ -9007,57 +9182,20 @@
                                                                           }
                                                                         }
                                                                       }
-                                                                    }
-                                                                  },
-                                                                  "totalFee": {
-                                                                    "type": "number",
-                                                                    "format": "float"
-                                                                  },
-                                                                  "balance": {
-                                                                    "type": "number",
-                                                                    "format": "float"
-                                                                  },
-                                                                  "createdAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "updatedAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "publishedAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "createdBy": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                          "id": {
-                                                                            "type": "string"
-                                                                          },
-                                                                          "attributes": {
-                                                                            "type": "object",
-                                                                            "properties": {}
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "updatedBy": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                          "id": {
-                                                                            "type": "string"
-                                                                          },
-                                                                          "attributes": {
-                                                                            "type": "object",
-                                                                            "properties": {}
+                                                                    },
+                                                                    "updatedBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
                                                                           }
                                                                         }
                                                                       }
@@ -9069,7 +9207,123 @@
                                                           }
                                                         }
                                                       },
-                                                      "payment": {
+                                                      "payments": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "data": {
+                                                            "type": "array",
+                                                            "items": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "attributes": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "accounts": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "array",
+                                                                          "items": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "paymentDate": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "transactionType": {
+                                                                      "type": "string",
+                                                                      "enum": [
+                                                                        "cash",
+                                                                        "card",
+                                                                        "cheque"
+                                                                      ]
+                                                                    },
+                                                                    "cashier": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "createdAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "updatedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "publishedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "createdBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "updatedBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "payment_plan": {
                                                         "type": "object",
                                                         "properties": {
                                                           "data": {
@@ -9081,84 +9335,31 @@
                                                               "attributes": {
                                                                 "type": "object",
                                                                 "properties": {
-                                                                  "applicants": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "array",
-                                                                        "items": {
-                                                                          "type": "object",
-                                                                          "properties": {
-                                                                            "id": {
-                                                                              "type": "string"
-                                                                            },
-                                                                            "attributes": {
-                                                                              "type": "object",
-                                                                              "properties": {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "accounts": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "array",
-                                                                        "items": {
-                                                                          "type": "object",
-                                                                          "properties": {
-                                                                            "id": {
-                                                                              "type": "string"
-                                                                            },
-                                                                            "attributes": {
-                                                                              "type": "object",
-                                                                              "properties": {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "paymentDate": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "transactionType": {
+                                                                  "paymentPlan": {
                                                                     "type": "string",
                                                                     "enum": [
-                                                                      "cash",
-                                                                      "card",
-                                                                      "cheque"
+                                                                      "monthly",
+                                                                      "quarterly",
+                                                                      "semi",
+                                                                      "full"
                                                                     ]
                                                                   },
-                                                                  "cashier": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                          "id": {
-                                                                            "type": "string"
-                                                                          },
-                                                                          "attributes": {
-                                                                            "type": "object",
-                                                                            "properties": {}
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
+                                                                  "frequency": {
+                                                                    "type": "integer"
+                                                                  },
+                                                                  "fee": {
+                                                                    "type": "number",
+                                                                    "format": "float"
+                                                                  },
+                                                                  "miscellaneous": {
+                                                                    "type": "number",
+                                                                    "format": "float"
                                                                   },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
                                                                   },
                                                                   "updatedAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "publishedAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
                                                                   },
@@ -9752,24 +9953,47 @@
                                 }
                               }
                             },
-                            "account": {
+                            "accounts": {
                               "type": "object",
                               "properties": {
                                 "data": {
-                                  "type": "object",
-                                  "properties": {
-                                    "id": {
-                                      "type": "string"
-                                    },
-                                    "attributes": {
-                                      "type": "object",
-                                      "properties": {}
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "attributes": {
+                                        "type": "object",
+                                        "properties": {}
+                                      }
                                     }
                                   }
                                 }
                               }
                             },
-                            "payment": {
+                            "payments": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "attributes": {
+                                        "type": "object",
+                                        "properties": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "payment_plan": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -12223,24 +12447,44 @@
                                                           }
                                                         }
                                                       },
-                                                      "account": {
+                                                      "accounts": {
                                                         "type": "object",
                                                         "properties": {
                                                           "data": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                              "id": {
-                                                                "type": "string"
-                                                              },
-                                                              "attributes": {
-                                                                "type": "object",
-                                                                "properties": {
-                                                                  "applicants": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "array",
-                                                                        "items": {
+                                                            "type": "array",
+                                                            "items": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "attributes": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "totalFee": {
+                                                                      "type": "number",
+                                                                      "format": "float"
+                                                                    },
+                                                                    "balance": {
+                                                                      "type": "number",
+                                                                      "format": "float"
+                                                                    },
+                                                                    "createdAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "updatedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "publishedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "createdBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
                                                                           "type": "object",
                                                                           "properties": {
                                                                             "id": {
@@ -12253,57 +12497,20 @@
                                                                           }
                                                                         }
                                                                       }
-                                                                    }
-                                                                  },
-                                                                  "totalFee": {
-                                                                    "type": "number",
-                                                                    "format": "float"
-                                                                  },
-                                                                  "balance": {
-                                                                    "type": "number",
-                                                                    "format": "float"
-                                                                  },
-                                                                  "createdAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "updatedAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "publishedAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "createdBy": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                          "id": {
-                                                                            "type": "string"
-                                                                          },
-                                                                          "attributes": {
-                                                                            "type": "object",
-                                                                            "properties": {}
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "updatedBy": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                          "id": {
-                                                                            "type": "string"
-                                                                          },
-                                                                          "attributes": {
-                                                                            "type": "object",
-                                                                            "properties": {}
+                                                                    },
+                                                                    "updatedBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
                                                                           }
                                                                         }
                                                                       }
@@ -12315,7 +12522,123 @@
                                                           }
                                                         }
                                                       },
-                                                      "payment": {
+                                                      "payments": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "data": {
+                                                            "type": "array",
+                                                            "items": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "attributes": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "accounts": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "array",
+                                                                          "items": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "paymentDate": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "transactionType": {
+                                                                      "type": "string",
+                                                                      "enum": [
+                                                                        "cash",
+                                                                        "card",
+                                                                        "cheque"
+                                                                      ]
+                                                                    },
+                                                                    "cashier": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "createdAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "updatedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "publishedAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "createdBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "updatedBy": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "payment_plan": {
                                                         "type": "object",
                                                         "properties": {
                                                           "data": {
@@ -12327,84 +12650,31 @@
                                                               "attributes": {
                                                                 "type": "object",
                                                                 "properties": {
-                                                                  "applicants": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "array",
-                                                                        "items": {
-                                                                          "type": "object",
-                                                                          "properties": {
-                                                                            "id": {
-                                                                              "type": "string"
-                                                                            },
-                                                                            "attributes": {
-                                                                              "type": "object",
-                                                                              "properties": {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "accounts": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "array",
-                                                                        "items": {
-                                                                          "type": "object",
-                                                                          "properties": {
-                                                                            "id": {
-                                                                              "type": "string"
-                                                                            },
-                                                                            "attributes": {
-                                                                              "type": "object",
-                                                                              "properties": {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "paymentDate": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "transactionType": {
+                                                                  "paymentPlan": {
                                                                     "type": "string",
                                                                     "enum": [
-                                                                      "cash",
-                                                                      "card",
-                                                                      "cheque"
+                                                                      "monthly",
+                                                                      "quarterly",
+                                                                      "semi",
+                                                                      "full"
                                                                     ]
                                                                   },
-                                                                  "cashier": {
-                                                                    "type": "object",
-                                                                    "properties": {
-                                                                      "data": {
-                                                                        "type": "object",
-                                                                        "properties": {
-                                                                          "id": {
-                                                                            "type": "string"
-                                                                          },
-                                                                          "attributes": {
-                                                                            "type": "object",
-                                                                            "properties": {}
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
+                                                                  "frequency": {
+                                                                    "type": "integer"
+                                                                  },
+                                                                  "fee": {
+                                                                    "type": "number",
+                                                                    "format": "float"
+                                                                  },
+                                                                  "miscellaneous": {
+                                                                    "type": "number",
+                                                                    "format": "float"
                                                                   },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
                                                                   },
                                                                   "updatedAt": {
-                                                                    "type": "string",
-                                                                    "format": "date-time"
-                                                                  },
-                                                                  "publishedAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
                                                                   },
@@ -12998,24 +13268,47 @@
                                 }
                               }
                             },
-                            "account": {
+                            "accounts": {
                               "type": "object",
                               "properties": {
                                 "data": {
-                                  "type": "object",
-                                  "properties": {
-                                    "id": {
-                                      "type": "string"
-                                    },
-                                    "attributes": {
-                                      "type": "object",
-                                      "properties": {}
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "attributes": {
+                                        "type": "object",
+                                        "properties": {}
+                                      }
                                     }
                                   }
                                 }
                               }
                             },
-                            "payment": {
+                            "payments": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "attributes": {
+                                        "type": "object",
+                                        "properties": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "payment_plan": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -13369,18 +13662,35 @@
                         ],
                         "example": "string or id"
                       },
-                      "account": {
-                        "oneOf": [
-                          {
-                            "type": "integer"
-                          },
-                          {
-                            "type": "string"
-                          }
-                        ],
-                        "example": "string or id"
+                      "accounts": {
+                        "type": "array",
+                        "items": {
+                          "oneOf": [
+                            {
+                              "type": "integer"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ],
+                          "example": "string or id"
+                        }
                       },
-                      "payment": {
+                      "payments": {
+                        "type": "array",
+                        "items": {
+                          "oneOf": [
+                            {
+                              "type": "integer"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ],
+                          "example": "string or id"
+                        }
+                      },
+                      "payment_plan": {
                         "oneOf": [
                           {
                             "type": "integer"

@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "applicants": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::applicant.applicant",
-      "mappedBy": "payment"
-    },
     "accounts": {
       "type": "relation",
       "relation": "oneToMany",
