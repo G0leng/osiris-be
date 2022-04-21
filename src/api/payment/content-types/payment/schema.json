@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -25,7 +25,8 @@
       "enum": [
         "cash",
         "card",
-        "cheque"
+        "cheque",
+        "bank"
       ]
     },
     "cashier": {
@@ -33,11 +34,22 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
     },
-    "students": {
+    "student": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::student.student",
-      "mappedBy": "payments"
+      "inversedBy": "payments"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "paymentProof": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

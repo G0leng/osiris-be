@@ -79,12 +79,6 @@
       "target": "api::credential.credential",
       "inversedBy": "students"
     },
-    "payments": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::payment.payment",
-      "inversedBy": "students"
-    },
     "payment_plan": {
       "type": "relation",
       "relation": "manyToOne",
@@ -105,6 +99,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::grade.grade",
+      "mappedBy": "student"
+    },
+    "payments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payment.payment",
       "mappedBy": "student"
     }
   }

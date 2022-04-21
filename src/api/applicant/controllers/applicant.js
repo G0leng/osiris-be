@@ -34,7 +34,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
             console.log("Approved as student");
             const sData = await strapi.service('api::student.student').find( {
                 filters:{applicantId:id},
-                populate:{institution:true, branch:true, payment_plan:true, grades:true}
+                populate:{institution:true, branch:true, payment_plan:true, grades:true, payments:true}
             });
             
             return sData.results[0];
