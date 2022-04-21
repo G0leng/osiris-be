@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "grades",
+  "info": {
+    "singularName": "grade",
+    "pluralName": "grades",
+    "displayName": "grade",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "grades"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject"
+    },
+    "school_year": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::school-year.school-year"
+    },
+    "gradingPeriod": {
+      "type": "integer"
+    },
+    "grade": {
+      "type": "decimal"
+    }
+  }
+}

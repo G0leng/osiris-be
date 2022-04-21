@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "middleName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "gradeLevel": {
+      "type": "string"
+    },
+    "profilePicture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "email": {
+      "type": "email"
+    },
+    "program": {
+      "type": "enumeration",
+      "enum": [
+        "gradeSchool",
+        "juniorHighSchool",
+        "seniorHighSchool"
+      ]
+    },
+    "institution": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::institution.institution",
+      "inversedBy": "students"
+    },
+    "branch": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::branch.branch",
+      "inversedBy": "students"
+    },
+    "exams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exam.exam"
+    },
+    "interview": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::interview.interview"
+    },
+    "guardian": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "credentials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::credential.credential",
+      "inversedBy": "students"
+    },
+    "payments": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::payment.payment",
+      "inversedBy": "students"
+    },
+    "payment_plan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::payment-plan.payment-plan",
+      "inversedBy": "students"
+    },
+    "lmsId": {
+      "type": "integer",
+      "unique": true
+    },
+    "applicantId": {
+      "type": "integer"
+    },
+    "studentId": {
+      "type": "string"
+    },
+    "grades": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::grade.grade",
+      "mappedBy": "student"
+    }
+  }
+}

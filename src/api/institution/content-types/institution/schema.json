@@ -66,6 +66,12 @@
       "relation": "oneToMany",
       "target": "api::branch.branch",
       "mappedBy": "institution"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student",
+      "mappedBy": "institution"
     }
   }
 }

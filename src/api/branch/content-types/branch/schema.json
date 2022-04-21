@@ -26,6 +26,12 @@
     },
     "contactNumber": {
       "type": "string"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student",
+      "mappedBy": "branch"
     }
   }
 }

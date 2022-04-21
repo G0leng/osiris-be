@@ -29,6 +29,12 @@
     },
     "miscellaneous": {
       "type": "decimal"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student",
+      "mappedBy": "payment_plan"
     }
   }
 }
