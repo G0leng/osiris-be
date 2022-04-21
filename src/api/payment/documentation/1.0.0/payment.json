@@ -2614,23 +2614,6 @@
                                                                                                                   }
                                                                                                                 }
                                                                                                               },
-                                                                                                              "student": {
-                                                                                                                "type": "object",
-                                                                                                                "properties": {
-                                                                                                                  "data": {
-                                                                                                                    "type": "object",
-                                                                                                                    "properties": {
-                                                                                                                      "id": {
-                                                                                                                        "type": "string"
-                                                                                                                      },
-                                                                                                                      "attributes": {
-                                                                                                                        "type": "object",
-                                                                                                                        "properties": {}
-                                                                                                                      }
-                                                                                                                    }
-                                                                                                                  }
-                                                                                                                }
-                                                                                                              },
                                                                                                               "amount": {
                                                                                                                 "type": "integer"
                                                                                                               },
@@ -2999,6 +2982,23 @@
                                                                                                                             }
                                                                                                                           }
                                                                                                                         }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              },
+                                                                                                              "student": {
+                                                                                                                "type": "object",
+                                                                                                                "properties": {
+                                                                                                                  "data": {
+                                                                                                                    "type": "object",
+                                                                                                                    "properties": {
+                                                                                                                      "id": {
+                                                                                                                        "type": "string"
+                                                                                                                      },
+                                                                                                                      "attributes": {
+                                                                                                                        "type": "object",
+                                                                                                                        "properties": {}
                                                                                                                       }
                                                                                                                     }
                                                                                                                   }
@@ -3876,23 +3876,6 @@
                                   }
                                 }
                               },
-                              "student": {
-                                "type": "object",
-                                "properties": {
-                                  "data": {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "attributes": {
-                                        "type": "object",
-                                        "properties": {}
-                                      }
-                                    }
-                                  }
-                                }
-                              },
                               "amount": {
                                 "type": "integer"
                               },
@@ -4261,6 +4244,23 @@
                                             }
                                           }
                                         }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "student": {
+                                "type": "object",
+                                "properties": {
+                                  "data": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "attributes": {
+                                        "type": "object",
+                                        "properties": {}
                                       }
                                     }
                                   }
@@ -7185,23 +7185,6 @@
                                                                                                                 }
                                                                                                               }
                                                                                                             },
-                                                                                                            "student": {
-                                                                                                              "type": "object",
-                                                                                                              "properties": {
-                                                                                                                "data": {
-                                                                                                                  "type": "object",
-                                                                                                                  "properties": {
-                                                                                                                    "id": {
-                                                                                                                      "type": "string"
-                                                                                                                    },
-                                                                                                                    "attributes": {
-                                                                                                                      "type": "object",
-                                                                                                                      "properties": {}
-                                                                                                                    }
-                                                                                                                  }
-                                                                                                                }
-                                                                                                              }
-                                                                                                            },
                                                                                                             "amount": {
                                                                                                               "type": "integer"
                                                                                                             },
@@ -7570,6 +7553,23 @@
                                                                                                                           }
                                                                                                                         }
                                                                                                                       }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "student": {
+                                                                                                              "type": "object",
+                                                                                                              "properties": {
+                                                                                                                "data": {
+                                                                                                                  "type": "object",
+                                                                                                                  "properties": {
+                                                                                                                    "id": {
+                                                                                                                      "type": "string"
+                                                                                                                    },
+                                                                                                                    "attributes": {
+                                                                                                                      "type": "object",
+                                                                                                                      "properties": {}
                                                                                                                     }
                                                                                                                   }
                                                                                                                 }
@@ -8447,23 +8447,6 @@
                                 }
                               }
                             },
-                            "student": {
-                              "type": "object",
-                              "properties": {
-                                "data": {
-                                  "type": "object",
-                                  "properties": {
-                                    "id": {
-                                      "type": "string"
-                                    },
-                                    "attributes": {
-                                      "type": "object",
-                                      "properties": {}
-                                    }
-                                  }
-                                }
-                              }
-                            },
                             "amount": {
                               "type": "integer"
                             },
@@ -8837,6 +8820,23 @@
                                 }
                               }
                             },
+                            "student": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -9089,7 +9089,10 @@
                         ],
                         "example": "string or id"
                       },
-                      "student": {
+                      "amount": {
+                        "type": "integer"
+                      },
+                      "paymentProof": {
                         "oneOf": [
                           {
                             "type": "integer"
@@ -9100,10 +9103,7 @@
                         ],
                         "example": "string or id"
                       },
-                      "amount": {
-                        "type": "integer"
-                      },
-                      "paymentProof": {
+                      "student": {
                         "oneOf": [
                           {
                             "type": "integer"
@@ -11765,23 +11765,6 @@
                                                                                                                 }
                                                                                                               }
                                                                                                             },
-                                                                                                            "student": {
-                                                                                                              "type": "object",
-                                                                                                              "properties": {
-                                                                                                                "data": {
-                                                                                                                  "type": "object",
-                                                                                                                  "properties": {
-                                                                                                                    "id": {
-                                                                                                                      "type": "string"
-                                                                                                                    },
-                                                                                                                    "attributes": {
-                                                                                                                      "type": "object",
-                                                                                                                      "properties": {}
-                                                                                                                    }
-                                                                                                                  }
-                                                                                                                }
-                                                                                                              }
-                                                                                                            },
                                                                                                             "amount": {
                                                                                                               "type": "integer"
                                                                                                             },
@@ -12150,6 +12133,23 @@
                                                                                                                           }
                                                                                                                         }
                                                                                                                       }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "student": {
+                                                                                                              "type": "object",
+                                                                                                              "properties": {
+                                                                                                                "data": {
+                                                                                                                  "type": "object",
+                                                                                                                  "properties": {
+                                                                                                                    "id": {
+                                                                                                                      "type": "string"
+                                                                                                                    },
+                                                                                                                    "attributes": {
+                                                                                                                      "type": "object",
+                                                                                                                      "properties": {}
                                                                                                                     }
                                                                                                                   }
                                                                                                                 }
@@ -13027,23 +13027,6 @@
                                 }
                               }
                             },
-                            "student": {
-                              "type": "object",
-                              "properties": {
-                                "data": {
-                                  "type": "object",
-                                  "properties": {
-                                    "id": {
-                                      "type": "string"
-                                    },
-                                    "attributes": {
-                                      "type": "object",
-                                      "properties": {}
-                                    }
-                                  }
-                                }
-                              }
-                            },
                             "amount": {
                               "type": "integer"
                             },
@@ -13412,6 +13395,23 @@
                                           }
                                         }
                                       }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "student": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {}
                                     }
                                   }
                                 }
@@ -16245,23 +16245,6 @@
                                                                                                                 }
                                                                                                               }
                                                                                                             },
-                                                                                                            "student": {
-                                                                                                              "type": "object",
-                                                                                                              "properties": {
-                                                                                                                "data": {
-                                                                                                                  "type": "object",
-                                                                                                                  "properties": {
-                                                                                                                    "id": {
-                                                                                                                      "type": "string"
-                                                                                                                    },
-                                                                                                                    "attributes": {
-                                                                                                                      "type": "object",
-                                                                                                                      "properties": {}
-                                                                                                                    }
-                                                                                                                  }
-                                                                                                                }
-                                                                                                              }
-                                                                                                            },
                                                                                                             "amount": {
                                                                                                               "type": "integer"
                                                                                                             },
@@ -16630,6 +16613,23 @@
                                                                                                                           }
                                                                                                                         }
                                                                                                                       }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "student": {
+                                                                                                              "type": "object",
+                                                                                                              "properties": {
+                                                                                                                "data": {
+                                                                                                                  "type": "object",
+                                                                                                                  "properties": {
+                                                                                                                    "id": {
+                                                                                                                      "type": "string"
+                                                                                                                    },
+                                                                                                                    "attributes": {
+                                                                                                                      "type": "object",
+                                                                                                                      "properties": {}
                                                                                                                     }
                                                                                                                   }
                                                                                                                 }
@@ -17507,23 +17507,6 @@
                                 }
                               }
                             },
-                            "student": {
-                              "type": "object",
-                              "properties": {
-                                "data": {
-                                  "type": "object",
-                                  "properties": {
-                                    "id": {
-                                      "type": "string"
-                                    },
-                                    "attributes": {
-                                      "type": "object",
-                                      "properties": {}
-                                    }
-                                  }
-                                }
-                              }
-                            },
                             "amount": {
                               "type": "integer"
                             },
@@ -17897,6 +17880,23 @@
                                 }
                               }
                             },
+                            "student": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -18160,7 +18160,10 @@
                         ],
                         "example": "string or id"
                       },
-                      "student": {
+                      "amount": {
+                        "type": "integer"
+                      },
+                      "paymentProof": {
                         "oneOf": [
                           {
                             "type": "integer"
@@ -18171,10 +18174,7 @@
                         ],
                         "example": "string or id"
                       },
-                      "amount": {
-                        "type": "integer"
-                      },
-                      "paymentProof": {
+                      "student": {
                         "oneOf": [
                           {
                             "type": "integer"

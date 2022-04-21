@@ -34,12 +34,6 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
     },
-    "student": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::student.student",
-      "inversedBy": "payments"
-    },
     "amount": {
       "type": "integer"
     },
@@ -50,6 +44,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "payments"
     }
   }
 }
