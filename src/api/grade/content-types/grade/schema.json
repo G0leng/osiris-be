@@ -20,13 +20,15 @@
     },
     "subject": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::subject.subject"
+      "relation": "manyToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "grades"
     },
     "school_year": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::school-year.school-year"
+      "relation": "manyToOne",
+      "target": "api::school-year.school-year",
+      "inversedBy": "grades"
     },
     "gradingPeriod": {
       "type": "integer"

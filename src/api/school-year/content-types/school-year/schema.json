@@ -4,15 +4,22 @@
   "info": {
     "singularName": "school-year",
     "pluralName": "school-years",
-    "displayName": "schoolYear"
+    "displayName": "schoolYear",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "sy": {
       "type": "string"
+    },
+    "grades": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::grade.grade",
+      "mappedBy": "school_year"
     }
   }
 }

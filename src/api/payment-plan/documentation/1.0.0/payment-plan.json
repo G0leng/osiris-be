@@ -3618,15 +3618,31 @@
                                                                       "gradeLevel": {
                                                                         "type": "string"
                                                                       },
+                                                                      "grades": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
+                                                                            "type": "array",
+                                                                            "items": {
+                                                                              "type": "object",
+                                                                              "properties": {
+                                                                                "id": {
+                                                                                  "type": "string"
+                                                                                },
+                                                                                "attributes": {
+                                                                                  "type": "object",
+                                                                                  "properties": {}
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
                                                                       "createdAt": {
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
                                                                       "updatedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
-                                                                      "publishedAt": {
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
@@ -3685,15 +3701,31 @@
                                                                       "sy": {
                                                                         "type": "string"
                                                                       },
+                                                                      "grades": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
+                                                                            "type": "array",
+                                                                            "items": {
+                                                                              "type": "object",
+                                                                              "properties": {
+                                                                                "id": {
+                                                                                  "type": "string"
+                                                                                },
+                                                                                "attributes": {
+                                                                                  "type": "object",
+                                                                                  "properties": {}
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
                                                                       "createdAt": {
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
                                                                       "updatedAt": {
-                                                                        "type": "string",
-                                                                        "format": "date-time"
-                                                                      },
-                                                                      "publishedAt": {
                                                                         "type": "string",
                                                                         "format": "date-time"
                                                                       },
@@ -7789,15 +7821,31 @@
                                                                     "gradeLevel": {
                                                                       "type": "string"
                                                                     },
+                                                                    "grades": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "array",
+                                                                          "items": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
                                                                     "updatedAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "publishedAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
@@ -7856,15 +7904,31 @@
                                                                     "sy": {
                                                                       "type": "string"
                                                                     },
+                                                                    "grades": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "array",
+                                                                          "items": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
                                                                     "updatedAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "publishedAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
@@ -11940,15 +12004,31 @@
                                                                     "gradeLevel": {
                                                                       "type": "string"
                                                                     },
+                                                                    "grades": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "array",
+                                                                          "items": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
                                                                     "updatedAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "publishedAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
@@ -12007,15 +12087,31 @@
                                                                     "sy": {
                                                                       "type": "string"
                                                                     },
+                                                                    "grades": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "array",
+                                                                          "items": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
                                                                     "updatedAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "publishedAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
@@ -16020,15 +16116,31 @@
                                                                     "gradeLevel": {
                                                                       "type": "string"
                                                                     },
+                                                                    "grades": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "array",
+                                                                          "items": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
                                                                     "updatedAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "publishedAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
@@ -16087,15 +16199,31 @@
                                                                     "sy": {
                                                                       "type": "string"
                                                                     },
+                                                                    "grades": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "array",
+                                                                          "items": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
                                                                     "updatedAt": {
-                                                                      "type": "string",
-                                                                      "format": "date-time"
-                                                                    },
-                                                                    "publishedAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
                                                                     },
