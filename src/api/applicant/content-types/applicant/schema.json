@@ -71,16 +71,6 @@
     "gradeLevel": {
       "type": "string"
     },
-    "profilePicture": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
-    },
     "accounts": {
       "type": "relation",
       "relation": "oneToMany",
@@ -95,6 +85,17 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::payment-plan.payment-plan"
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "profilePicture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

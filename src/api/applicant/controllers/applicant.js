@@ -29,12 +29,13 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
     findOne: async (ctx) => {
         const id = ctx.params.id;
         //TODO: add info if already a student
-        const aData = await strapi.service('api::applicant.applicant').findOne(id, {populate:{institution:true, payment_plan:true}});
+        const aData = await strapi.service('api::applicant.applicant').findOne(id, {populate:'*'});
+        
         if(aData.admissionStatus){
             console.log("Approved as student");
-            const sData = await strapi.service('api::student.student').find( {
+            const sData = await strapi.service('api::student.student').find( {         
                 filters:{applicantId:id},
-                populate:{institution:true, branch:true, payment_plan:true, grades:true, payments:true}
+                populate:'*'
             });
             
             return sData.results[0];
@@ -47,7 +48,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
         const id = ctx.params.id;
         console.log("Applicant ID", id);
         const applicantData = await strapi.service('api::applicant.applicant').update(id, ctx.request.body);
-        const aData = await strapi.service('api::applicant.applicant').findOne(id, {populate:{institution:true, branch:true, payment_plan:true, guardian:true }});
+        const aData = await strapi.service('api::applicant.applicant').findOne(id, {populate:'*'});
         console.log("Applicant Data", aData);
         if(ctx.request.body.data.admissionStatus){
             const sData = aData;
@@ -62,7 +63,6 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
             if (typeof sData.updatedAt !== 'undefined') {
                 delete sData.updatedAt;
             }
-            //auto generate email
             const email = studentId+"@headstartsolutionsph.com"
             sData.studentId = studentId;
             sData.email = email;
@@ -70,13 +70,22 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
             sData.guardian =  parseInt(aData.guardian.id);
             sData.institution = parseInt(aData.institution.id);
             sData.branch = parseInt(aData.branch.id);
-            sData.payment_plan = parseInt(aData.payment_plan.id)
-            sData.publishedAt = new Date()
-            console.log("Student Data: ", sData);
-            //return aData;
-            
-            //TODO: remove create and published date before inserting
+            sData.payment_plan = parseInt(aData.payment_plan.id);
+            sData.publishedAt = new Date();
+            sData.birthDate = aData.birthDate;
+            sData.profilePicture = aData.profilePicture;
+        
+            //TODO: autogenerate password; use birthdate mm-dd-yyyy-middleName
+            const password = aData.birthDate +"-"+ aData.middleName;
+            console.log("Password: ", password);
+            //TODO: add to tekteach
+            //TODO: ave tekteach student id here
+            //sData.lmsId = tekTeachId.
+            //console.log("Student Data: ", sData);
+            //return sData;
+
             const studentData = await strapi.service('api::student.student').create({data:sData});
+            //TODO: create user login and password
             return studentData;   
         }
         return applicantData;
