@@ -70,12 +70,6 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
     },
-    "credentials": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::credential.credential",
-      "inversedBy": "students"
-    },
     "payment_plan": {
       "type": "relation",
       "relation": "manyToOne",
@@ -106,6 +100,12 @@
     },
     "birthDate": {
       "type": "date"
+    },
+    "submitted_credentials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::submitted-credential.submitted-credential",
+      "mappedBy": "student"
     }
   }
 }

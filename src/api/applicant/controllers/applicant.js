@@ -29,7 +29,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
         const id = ctx.params.id;
         //TODO: add info if already a student
         const aData = await strapi.service('api::applicant.applicant').findOne(id, {populate:'*'});
-        
+        console.log("ADTA Initial: ", aData);
         if(aData.admissionStatus){
             console.log("Approved as student");
             const sData = await strapi.service('api::student.student').find( {         
@@ -38,9 +38,12 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
             });
             
             return sData.results[0];
+        }else{
+            console.log("ADTA not approved: ", aData);
+            return aData;
         }
-        console.log("ADTA: ", aData);
-        return aData;
+        //console.log("ADTA: ", aData);
+        //return aData;
     },
 
     registerToLMS: async (ctx) => {
@@ -104,7 +107,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
         if(ctx.request.body.data.admissionStatus){
             const aData = await strapi.service('api::applicant.applicant').findOne(id, {populate:'*'});
             const randId = (new Date().getTime()); 
-            const studentId = "2022-"+randId+"-"+id;
+            let studentId = "2022-"+randId+"-"+id;
             const email = studentId+"@headstartsolutionsph.com";
             aData.email = email;
             //Add to tekteach
@@ -112,7 +115,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
             //TODO: ave tekteach student id here
             //sData.lmsId = tekTeachId.
             console.log("Applicant Data", aData);
-            const sData = aData;
+            const sData ="";
             console.log("Status TRUE");
             //auto generate student ID
             
@@ -123,25 +126,35 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
             if (typeof sData.updatedAt !== 'undefined') {
                 delete sData.updatedAt;
             }
-            //const email = studentId+"@headstartsolutionsph.com"
-            sData.studentId = studentId;
-            sData.email = email;
-            sData.applicantId = parseInt(id);
-            sData.guardian =  parseInt(aData.guardian.id);
-            sData.institution = parseInt(aData.institution.id);
-            sData.branch = parseInt(aData.branch.id);
-            sData.payment_plan = parseInt(aData.payment_plan.id);
-            sData.publishedAt = new Date();
-            sData.birthDate = aData.birthDate;
-            sData.profilePicture = aData.profilePicture;
         
             //TODO: autogenerate password; use birthdate mm-dd-yyyy-middleName
             const password = aData.middleName;
             console.log("Password: ", password);
 
             //console.log("Student Data: ", sData);
+            const newData = {
+                "data":{
+                    "firstName": aData.firstName,
+                    "middleName": aData.middleName,
+                    "lastName": aData.lastName,
+                    "program": aData.program,
+                    "gradeLevel": aData.gradeLevel,
+                    "email": email,
+                    "studentId": studentId,
+                    "applicantId": id,
+                    "guardian": aData.guardian.id,
+                    "institution": aData.institution.id,
+                    "branch": aData.branch.id,
+                    "payment_plan": aData.payment_plan.id,
+                    "publishedAt": new Date(),
+                    "birthDate": aData.birthDate,
+                    "profilePicture": aData.profilePicture,
+                    "admissionStatus": aData.admissionStatus,
+                    "submitted_credentials": aData.submitted_credentials
+                }
+            }
             //return sData
-            const studentData = await strapi.service('api::student.student').create({data:sData});
+            const studentData = await strapi.service('api::student.student').create(newData, {populate:'*'});
             //TODO: create USER login and password
             return studentData;   
         }

@@ -46,11 +46,6 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "applicants"
     },
-    "credentials": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::credential.credential"
-    },
     "program": {
       "type": "enumeration",
       "enum": [
@@ -96,6 +91,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "submitted_credentials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::submitted-credential.submitted-credential",
+      "mappedBy": "applicant"
     }
   }
 }

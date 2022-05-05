@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "submitted_credentials",
+  "info": {
+    "singularName": "submitted-credential",
+    "pluralName": "submitted-credentials",
+    "displayName": "submittedCredential"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "credential": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::credential.credential"
+    },
+    "credentialPhoto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "isApproved": {
+      "type": "boolean"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "submitted_credentials"
+    },
+    "applicant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::applicant.applicant",
+      "inversedBy": "submitted_credentials"
+    }
+  }
+}
