@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/branches": {
+    "/school-events": {
       "get": {
         "responses": {
           "200": {
@@ -20,10 +20,20 @@
                           "attributes": {
                             "type": "object",
                             "properties": {
-                              "branchName": {
+                              "eventName": {
                                 "type": "string"
                               },
-                              "locationMap": {},
+                              "eventDescription": {
+                                "type": "string"
+                              },
+                              "startDate": {
+                                "type": "string",
+                                "format": "date"
+                              },
+                              "endDate": {
+                                "type": "string",
+                                "format": "date"
+                              },
                               "institution": {
                                 "type": "object",
                                 "properties": {
@@ -4916,29 +4926,6 @@
                                   }
                                 }
                               },
-                              "contactNumber": {
-                                "type": "string"
-                              },
-                              "students": {
-                                "type": "object",
-                                "properties": {
-                                  "data": {
-                                    "type": "array",
-                                    "items": {
-                                      "type": "object",
-                                      "properties": {
-                                        "id": {
-                                          "type": "string"
-                                        },
-                                        "attributes": {
-                                          "type": "object",
-                                          "properties": {}
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -5161,7 +5148,7 @@
           }
         },
         "tags": [
-          "Branch"
+          "School-event"
         ],
         "parameters": [
           {
@@ -5245,7 +5232,7 @@
             }
           }
         ],
-        "operationId": "get/branches"
+        "operationId": "get/school-events"
       },
       "post": {
         "responses": {
@@ -5264,10 +5251,20 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "branchName": {
+                            "eventName": {
                               "type": "string"
                             },
-                            "locationMap": {},
+                            "eventDescription": {
+                              "type": "string"
+                            },
+                            "startDate": {
+                              "type": "string",
+                              "format": "date"
+                            },
+                            "endDate": {
+                              "type": "string",
+                              "format": "date"
+                            },
                             "institution": {
                               "type": "object",
                               "properties": {
@@ -10160,29 +10157,6 @@
                                 }
                               }
                             },
-                            "contactNumber": {
-                              "type": "string"
-                            },
-                            "students": {
-                              "type": "object",
-                              "properties": {
-                                "data": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "attributes": {
-                                        "type": "object",
-                                        "properties": {}
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -10384,10 +10358,10 @@
           }
         },
         "tags": [
-          "Branch"
+          "School-event"
         ],
         "parameters": [],
-        "operationId": "post/branches",
+        "operationId": "post/school-events",
         "requestBody": {
           "required": true,
           "content": {
@@ -10397,10 +10371,20 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "branchName": {
+                      "eventName": {
                         "type": "string"
                       },
-                      "locationMap": {},
+                      "eventDescription": {
+                        "type": "string"
+                      },
+                      "startDate": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "endDate": {
+                        "type": "string",
+                        "format": "date"
+                      },
                       "institution": {
                         "oneOf": [
                           {
@@ -10411,23 +10395,6 @@
                           }
                         ],
                         "example": "string or id"
-                      },
-                      "contactNumber": {
-                        "type": "string"
-                      },
-                      "students": {
-                        "type": "array",
-                        "items": {
-                          "oneOf": [
-                            {
-                              "type": "integer"
-                            },
-                            {
-                              "type": "string"
-                            }
-                          ],
-                          "example": "string or id"
-                        }
                       },
                       "createdAt": {
                         "type": "string",
@@ -10468,7 +10435,7 @@
         }
       }
     },
-    "/branches/{id}": {
+    "/school-events/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -10486,10 +10453,20 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "branchName": {
+                            "eventName": {
                               "type": "string"
                             },
-                            "locationMap": {},
+                            "eventDescription": {
+                              "type": "string"
+                            },
+                            "startDate": {
+                              "type": "string",
+                              "format": "date"
+                            },
+                            "endDate": {
+                              "type": "string",
+                              "format": "date"
+                            },
                             "institution": {
                               "type": "object",
                               "properties": {
@@ -15382,29 +15359,6 @@
                                 }
                               }
                             },
-                            "contactNumber": {
-                              "type": "string"
-                            },
-                            "students": {
-                              "type": "object",
-                              "properties": {
-                                "data": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "attributes": {
-                                        "type": "object",
-                                        "properties": {}
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -15606,7 +15560,7 @@
           }
         },
         "tags": [
-          "Branch"
+          "School-event"
         ],
         "parameters": [
           {
@@ -15620,7 +15574,7 @@
             }
           }
         ],
-        "operationId": "get/branches/{id}"
+        "operationId": "get/school-events/{id}"
       },
       "put": {
         "responses": {
@@ -15639,10 +15593,20 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "branchName": {
+                            "eventName": {
                               "type": "string"
                             },
-                            "locationMap": {},
+                            "eventDescription": {
+                              "type": "string"
+                            },
+                            "startDate": {
+                              "type": "string",
+                              "format": "date"
+                            },
+                            "endDate": {
+                              "type": "string",
+                              "format": "date"
+                            },
                             "institution": {
                               "type": "object",
                               "properties": {
@@ -20535,29 +20499,6 @@
                                 }
                               }
                             },
-                            "contactNumber": {
-                              "type": "string"
-                            },
-                            "students": {
-                              "type": "object",
-                              "properties": {
-                                "data": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "attributes": {
-                                        "type": "object",
-                                        "properties": {}
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -20759,7 +20700,7 @@
           }
         },
         "tags": [
-          "Branch"
+          "School-event"
         ],
         "parameters": [
           {
@@ -20773,7 +20714,7 @@
             }
           }
         ],
-        "operationId": "put/branches/{id}",
+        "operationId": "put/school-events/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -20783,10 +20724,20 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "branchName": {
+                      "eventName": {
                         "type": "string"
                       },
-                      "locationMap": {},
+                      "eventDescription": {
+                        "type": "string"
+                      },
+                      "startDate": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "endDate": {
+                        "type": "string",
+                        "format": "date"
+                      },
                       "institution": {
                         "oneOf": [
                           {
@@ -20797,23 +20748,6 @@
                           }
                         ],
                         "example": "string or id"
-                      },
-                      "contactNumber": {
-                        "type": "string"
-                      },
-                      "students": {
-                        "type": "array",
-                        "items": {
-                          "oneOf": [
-                            {
-                              "type": "integer"
-                            },
-                            {
-                              "type": "string"
-                            }
-                          ],
-                          "example": "string or id"
-                        }
                       },
                       "createdAt": {
                         "type": "string",
@@ -21013,7 +20947,7 @@
           }
         },
         "tags": [
-          "Branch"
+          "School-event"
         ],
         "parameters": [
           {
@@ -21027,7 +20961,7 @@
             }
           }
         ],
-        "operationId": "delete/branches/{id}"
+        "operationId": "delete/school-events/{id}"
       }
     }
   }

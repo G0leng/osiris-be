@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/payment-plans": {
+    "/sections": {
       "get": {
         "responses": {
           "200": {
@@ -20,25 +20,8 @@
                           "attributes": {
                             "type": "object",
                             "properties": {
-                              "paymentPlan": {
-                                "type": "string",
-                                "enum": [
-                                  "monthly",
-                                  "quarterly",
-                                  "semi",
-                                  "full"
-                                ]
-                              },
-                              "frequency": {
-                                "type": "integer"
-                              },
-                              "fee": {
-                                "type": "number",
-                                "format": "float"
-                              },
-                              "miscellaneous": {
-                                "type": "number",
-                                "format": "float"
+                              "sectionName": {
+                                "type": "string"
                               },
                               "students": {
                                 "type": "object",
@@ -4935,6 +4918,23 @@
                                   }
                                 }
                               },
+                              "school_year": {
+                                "type": "object",
+                                "properties": {
+                                  "data": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "attributes": {
+                                        "type": "object",
+                                        "properties": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -5157,7 +5157,7 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Section"
         ],
         "parameters": [
           {
@@ -5241,7 +5241,7 @@
             }
           }
         ],
-        "operationId": "get/payment-plans"
+        "operationId": "get/sections"
       },
       "post": {
         "responses": {
@@ -5260,25 +5260,8 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "paymentPlan": {
-                              "type": "string",
-                              "enum": [
-                                "monthly",
-                                "quarterly",
-                                "semi",
-                                "full"
-                              ]
-                            },
-                            "frequency": {
-                              "type": "integer"
-                            },
-                            "fee": {
-                              "type": "number",
-                              "format": "float"
-                            },
-                            "miscellaneous": {
-                              "type": "number",
-                              "format": "float"
+                            "sectionName": {
+                              "type": "string"
                             },
                             "students": {
                               "type": "object",
@@ -10175,6 +10158,23 @@
                                 }
                               }
                             },
+                            "school_year": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -10376,10 +10376,10 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Section"
         ],
         "parameters": [],
-        "operationId": "post/payment-plans",
+        "operationId": "post/sections",
         "requestBody": {
           "required": true,
           "content": {
@@ -10389,25 +10389,8 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "paymentPlan": {
-                        "type": "string",
-                        "enum": [
-                          "monthly",
-                          "quarterly",
-                          "semi",
-                          "full"
-                        ]
-                      },
-                      "frequency": {
-                        "type": "integer"
-                      },
-                      "fee": {
-                        "type": "number",
-                        "format": "float"
-                      },
-                      "miscellaneous": {
-                        "type": "number",
-                        "format": "float"
+                      "sectionName": {
+                        "type": "string"
                       },
                       "students": {
                         "type": "array",
@@ -10422,6 +10405,17 @@
                           ],
                           "example": "string or id"
                         }
+                      },
+                      "school_year": {
+                        "oneOf": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ],
+                        "example": "string or id"
                       },
                       "createdAt": {
                         "type": "string",
@@ -10462,7 +10456,7 @@
         }
       }
     },
-    "/payment-plans/{id}": {
+    "/sections/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -10480,25 +10474,8 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "paymentPlan": {
-                              "type": "string",
-                              "enum": [
-                                "monthly",
-                                "quarterly",
-                                "semi",
-                                "full"
-                              ]
-                            },
-                            "frequency": {
-                              "type": "integer"
-                            },
-                            "fee": {
-                              "type": "number",
-                              "format": "float"
-                            },
-                            "miscellaneous": {
-                              "type": "number",
-                              "format": "float"
+                            "sectionName": {
+                              "type": "string"
                             },
                             "students": {
                               "type": "object",
@@ -15395,6 +15372,23 @@
                                 }
                               }
                             },
+                            "school_year": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -15596,7 +15590,7 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Section"
         ],
         "parameters": [
           {
@@ -15610,7 +15604,7 @@
             }
           }
         ],
-        "operationId": "get/payment-plans/{id}"
+        "operationId": "get/sections/{id}"
       },
       "put": {
         "responses": {
@@ -15629,25 +15623,8 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "paymentPlan": {
-                              "type": "string",
-                              "enum": [
-                                "monthly",
-                                "quarterly",
-                                "semi",
-                                "full"
-                              ]
-                            },
-                            "frequency": {
-                              "type": "integer"
-                            },
-                            "fee": {
-                              "type": "number",
-                              "format": "float"
-                            },
-                            "miscellaneous": {
-                              "type": "number",
-                              "format": "float"
+                            "sectionName": {
+                              "type": "string"
                             },
                             "students": {
                               "type": "object",
@@ -20544,6 +20521,23 @@
                                 }
                               }
                             },
+                            "school_year": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "attributes": {
+                                      "type": "object",
+                                      "properties": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -20745,7 +20739,7 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Section"
         ],
         "parameters": [
           {
@@ -20759,7 +20753,7 @@
             }
           }
         ],
-        "operationId": "put/payment-plans/{id}",
+        "operationId": "put/sections/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -20769,25 +20763,8 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "paymentPlan": {
-                        "type": "string",
-                        "enum": [
-                          "monthly",
-                          "quarterly",
-                          "semi",
-                          "full"
-                        ]
-                      },
-                      "frequency": {
-                        "type": "integer"
-                      },
-                      "fee": {
-                        "type": "number",
-                        "format": "float"
-                      },
-                      "miscellaneous": {
-                        "type": "number",
-                        "format": "float"
+                      "sectionName": {
+                        "type": "string"
                       },
                       "students": {
                         "type": "array",
@@ -20802,6 +20779,17 @@
                           ],
                           "example": "string or id"
                         }
+                      },
+                      "school_year": {
+                        "oneOf": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ],
+                        "example": "string or id"
                       },
                       "createdAt": {
                         "type": "string",
@@ -21001,7 +20989,7 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Section"
         ],
         "parameters": [
           {
@@ -21015,7 +21003,7 @@
             }
           }
         ],
-        "operationId": "delete/payment-plans/{id}"
+        "operationId": "delete/sections/{id}"
       }
     }
   }

@@ -49,6 +49,12 @@
         "videos",
         "audios"
       ]
+    },
+    "schedule": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::schedule.schedule",
+      "mappedBy": "teacher"
     }
   }
 }

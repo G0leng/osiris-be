@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedules",
+  "info": {
+    "singularName": "schedule",
+    "pluralName": "schedules",
+    "displayName": "schedule",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "day": {
+      "type": "integer"
+    },
+    "startTime": {
+      "type": "decimal"
+    },
+    "endTime": {
+      "type": "decimal"
+    },
+    "room": {
+      "type": "string"
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher",
+      "inversedBy": "schedule"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "schedule"
+    }
+  }
+}

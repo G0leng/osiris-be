@@ -26,6 +26,12 @@
       "relation": "oneToMany",
       "target": "api::grade.grade",
       "mappedBy": "subject"
+    },
+    "schedule": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::schedule.schedule",
+      "mappedBy": "subject"
     }
   }
 }

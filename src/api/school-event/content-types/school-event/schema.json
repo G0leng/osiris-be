@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "school_events",
+  "info": {
+    "singularName": "school-event",
+    "pluralName": "school-events",
+    "displayName": "schoolEvent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventName": {
+      "type": "string"
+    },
+    "eventDescription": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "institution": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::institution.institution"
+    }
+  }
+}
