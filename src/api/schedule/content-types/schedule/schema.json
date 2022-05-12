@@ -26,9 +26,9 @@
     },
     "teacher": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::teacher.teacher",
-      "inversedBy": "schedule"
+      "inversedBy": "schedules"
     },
     "subject": {
       "type": "relation",

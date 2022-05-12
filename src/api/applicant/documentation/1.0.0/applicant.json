@@ -4365,18 +4365,21 @@
                                                                                                                             }
                                                                                                                           }
                                                                                                                         },
-                                                                                                                        "schedule": {
+                                                                                                                        "schedules": {
                                                                                                                           "type": "object",
                                                                                                                           "properties": {
                                                                                                                             "data": {
-                                                                                                                              "type": "object",
-                                                                                                                              "properties": {
-                                                                                                                                "id": {
-                                                                                                                                  "type": "string"
-                                                                                                                                },
-                                                                                                                                "attributes": {
-                                                                                                                                  "type": "object",
-                                                                                                                                  "properties": {}
+                                                                                                                              "type": "array",
+                                                                                                                              "items": {
+                                                                                                                                "type": "object",
+                                                                                                                                "properties": {
+                                                                                                                                  "id": {
+                                                                                                                                    "type": "string"
+                                                                                                                                  },
+                                                                                                                                  "attributes": {
+                                                                                                                                    "type": "object",
+                                                                                                                                    "properties": {}
+                                                                                                                                  }
                                                                                                                                 }
                                                                                                                               }
                                                                                                                             }
@@ -10133,18 +10136,21 @@
                                                                                                                           }
                                                                                                                         }
                                                                                                                       },
-                                                                                                                      "schedule": {
+                                                                                                                      "schedules": {
                                                                                                                         "type": "object",
                                                                                                                         "properties": {
                                                                                                                           "data": {
-                                                                                                                            "type": "object",
-                                                                                                                            "properties": {
-                                                                                                                              "id": {
-                                                                                                                                "type": "string"
-                                                                                                                              },
-                                                                                                                              "attributes": {
-                                                                                                                                "type": "object",
-                                                                                                                                "properties": {}
+                                                                                                                            "type": "array",
+                                                                                                                            "items": {
+                                                                                                                              "type": "object",
+                                                                                                                              "properties": {
+                                                                                                                                "id": {
+                                                                                                                                  "type": "string"
+                                                                                                                                },
+                                                                                                                                "attributes": {
+                                                                                                                                  "type": "object",
+                                                                                                                                  "properties": {}
+                                                                                                                                }
                                                                                                                               }
                                                                                                                             }
                                                                                                                           }
@@ -16002,18 +16008,21 @@
                                                                                                                           }
                                                                                                                         }
                                                                                                                       },
-                                                                                                                      "schedule": {
+                                                                                                                      "schedules": {
                                                                                                                         "type": "object",
                                                                                                                         "properties": {
                                                                                                                           "data": {
-                                                                                                                            "type": "object",
-                                                                                                                            "properties": {
-                                                                                                                              "id": {
-                                                                                                                                "type": "string"
-                                                                                                                              },
-                                                                                                                              "attributes": {
-                                                                                                                                "type": "object",
-                                                                                                                                "properties": {}
+                                                                                                                            "type": "array",
+                                                                                                                            "items": {
+                                                                                                                              "type": "object",
+                                                                                                                              "properties": {
+                                                                                                                                "id": {
+                                                                                                                                  "type": "string"
+                                                                                                                                },
+                                                                                                                                "attributes": {
+                                                                                                                                  "type": "object",
+                                                                                                                                  "properties": {}
+                                                                                                                                }
                                                                                                                               }
                                                                                                                             }
                                                                                                                           }
@@ -21679,18 +21688,21 @@
                                                                                                                           }
                                                                                                                         }
                                                                                                                       },
-                                                                                                                      "schedule": {
+                                                                                                                      "schedules": {
                                                                                                                         "type": "object",
                                                                                                                         "properties": {
                                                                                                                           "data": {
-                                                                                                                            "type": "object",
-                                                                                                                            "properties": {
-                                                                                                                              "id": {
-                                                                                                                                "type": "string"
-                                                                                                                              },
-                                                                                                                              "attributes": {
-                                                                                                                                "type": "object",
-                                                                                                                                "properties": {}
+                                                                                                                            "type": "array",
+                                                                                                                            "items": {
+                                                                                                                              "type": "object",
+                                                                                                                              "properties": {
+                                                                                                                                "id": {
+                                                                                                                                  "type": "string"
+                                                                                                                                },
+                                                                                                                                "attributes": {
+                                                                                                                                  "type": "object",
+                                                                                                                                  "properties": {}
+                                                                                                                                }
                                                                                                                               }
                                                                                                                             }
                                                                                                                           }
@@ -27735,18 +27747,21 @@
                                                                                                                           }
                                                                                                                         }
                                                                                                                       },
-                                                                                                                      "schedule": {
+                                                                                                                      "schedules": {
                                                                                                                         "type": "object",
                                                                                                                         "properties": {
                                                                                                                           "data": {
-                                                                                                                            "type": "object",
-                                                                                                                            "properties": {
-                                                                                                                              "id": {
-                                                                                                                                "type": "string"
-                                                                                                                              },
-                                                                                                                              "attributes": {
-                                                                                                                                "type": "object",
-                                                                                                                                "properties": {}
+                                                                                                                            "type": "array",
+                                                                                                                            "items": {
+                                                                                                                              "type": "object",
+                                                                                                                              "properties": {
+                                                                                                                                "id": {
+                                                                                                                                  "type": "string"
+                                                                                                                                },
+                                                                                                                                "attributes": {
+                                                                                                                                  "type": "object",
+                                                                                                                                  "properties": {}
+                                                                                                                                }
                                                                                                                               }
                                                                                                                             }
                                                                                                                           }

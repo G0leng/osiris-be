@@ -50,9 +50,9 @@
         "audios"
       ]
     },
-    "schedule": {
+    "schedules": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::schedule.schedule",
       "mappedBy": "teacher"
     }
