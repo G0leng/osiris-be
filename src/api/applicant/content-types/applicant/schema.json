@@ -97,6 +97,19 @@
       "relation": "oneToMany",
       "target": "api::submitted-credential.submitted-credential",
       "mappedBy": "applicant"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "religion": {
+      "type": "string"
+    },
+    "lrn": {
+      "type": "string"
     }
   }
 }

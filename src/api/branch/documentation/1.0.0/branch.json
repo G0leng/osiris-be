@@ -3704,6 +3704,19 @@
                                                                                                     }
                                                                                                   }
                                                                                                 },
+                                                                                                "gender": {
+                                                                                                  "type": "string",
+                                                                                                  "enum": [
+                                                                                                    "male",
+                                                                                                    "female"
+                                                                                                  ]
+                                                                                                },
+                                                                                                "religion": {
+                                                                                                  "type": "string"
+                                                                                                },
+                                                                                                "lrn": {
+                                                                                                  "type": "string"
+                                                                                                },
                                                                                                 "createdAt": {
                                                                                                   "type": "string",
                                                                                                   "format": "date-time"
@@ -4752,6 +4765,19 @@
                                                                             }
                                                                           }
                                                                         }
+                                                                      },
+                                                                      "gender": {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                          "male",
+                                                                          "female"
+                                                                        ]
+                                                                      },
+                                                                      "religion": {
+                                                                        "type": "string"
+                                                                      },
+                                                                      "lrn": {
+                                                                        "type": "string"
                                                                       },
                                                                       "createdAt": {
                                                                         "type": "string",
@@ -8951,6 +8977,19 @@
                                                                                                   }
                                                                                                 }
                                                                                               },
+                                                                                              "gender": {
+                                                                                                "type": "string",
+                                                                                                "enum": [
+                                                                                                  "male",
+                                                                                                  "female"
+                                                                                                ]
+                                                                                              },
+                                                                                              "religion": {
+                                                                                                "type": "string"
+                                                                                              },
+                                                                                              "lrn": {
+                                                                                                "type": "string"
+                                                                                              },
                                                                                               "createdAt": {
                                                                                                 "type": "string",
                                                                                                 "format": "date-time"
@@ -9999,6 +10038,19 @@
                                                                           }
                                                                         }
                                                                       }
+                                                                    },
+                                                                    "gender": {
+                                                                      "type": "string",
+                                                                      "enum": [
+                                                                        "male",
+                                                                        "female"
+                                                                      ]
+                                                                    },
+                                                                    "religion": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "lrn": {
+                                                                      "type": "string"
                                                                     },
                                                                     "createdAt": {
                                                                       "type": "string",
@@ -14176,6 +14228,19 @@
                                                                                                   }
                                                                                                 }
                                                                                               },
+                                                                                              "gender": {
+                                                                                                "type": "string",
+                                                                                                "enum": [
+                                                                                                  "male",
+                                                                                                  "female"
+                                                                                                ]
+                                                                                              },
+                                                                                              "religion": {
+                                                                                                "type": "string"
+                                                                                              },
+                                                                                              "lrn": {
+                                                                                                "type": "string"
+                                                                                              },
                                                                                               "createdAt": {
                                                                                                 "type": "string",
                                                                                                 "format": "date-time"
@@ -15224,6 +15289,19 @@
                                                                           }
                                                                         }
                                                                       }
+                                                                    },
+                                                                    "gender": {
+                                                                      "type": "string",
+                                                                      "enum": [
+                                                                        "male",
+                                                                        "female"
+                                                                      ]
+                                                                    },
+                                                                    "religion": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "lrn": {
+                                                                      "type": "string"
                                                                     },
                                                                     "createdAt": {
                                                                       "type": "string",
@@ -19332,6 +19410,19 @@
                                                                                                   }
                                                                                                 }
                                                                                               },
+                                                                                              "gender": {
+                                                                                                "type": "string",
+                                                                                                "enum": [
+                                                                                                  "male",
+                                                                                                  "female"
+                                                                                                ]
+                                                                                              },
+                                                                                              "religion": {
+                                                                                                "type": "string"
+                                                                                              },
+                                                                                              "lrn": {
+                                                                                                "type": "string"
+                                                                                              },
                                                                                               "createdAt": {
                                                                                                 "type": "string",
                                                                                                 "format": "date-time"
@@ -20380,6 +20471,19 @@
                                                                           }
                                                                         }
                                                                       }
+                                                                    },
+                                                                    "gender": {
+                                                                      "type": "string",
+                                                                      "enum": [
+                                                                        "male",
+                                                                        "female"
+                                                                      ]
+                                                                    },
+                                                                    "religion": {
+                                                                      "type": "string"
+                                                                    },
+                                                                    "lrn": {
+                                                                      "type": "string"
                                                                     },
                                                                     "createdAt": {
                                                                       "type": "string",

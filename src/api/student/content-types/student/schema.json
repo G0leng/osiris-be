@@ -111,6 +111,19 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::subject.subject"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "religion": {
+      "type": "string"
+    },
+    "lrn": {
+      "type": "string"
     }
   }
 }
