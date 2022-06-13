@@ -18,7 +18,8 @@
     "students": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::student.student"
+      "target": "api::student.student",
+      "mappedBy": "section"
     },
     "school_year": {
       "type": "relation",
