@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guardians",
+  "info": {
+    "singularName": "guardian",
+    "pluralName": "guardians",
+    "displayName": "guardian",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "middleName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "mobileNumber": {
+      "type": "string"
+    },
+    "relationship": {
+      "type": "enumeration",
+      "enum": [
+        "parent",
+        "grandparent"
+      ]
+    },
+    "applicants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::applicant.applicant",
+      "mappedBy": "guardians"
+    }
+  }
+}

@@ -7,7 +7,6 @@
 const { createCoreController } = require('@strapi/strapi').factories;
 const axios = require('axios');
 module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
-    
     create: async (ctx) => {
         const institution = ctx.request.body.data.institution;
         console.log("Institution body: ",institution);
@@ -23,6 +22,54 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
         const aData = await strapi.service('api::applicant.applicant').findOne(applicantData.id, {populate:{institution:true}});
         console.log("ADTA: ", aData);
         return aData;
+    },
+
+    submit: async (ctx) => {
+        const guardian = {
+            "data":{
+                "firstName":ctx.request.body.data.guardian.firstName,
+                "middleName":ctx.request.body.data.guardian.middleName,
+                "lastName":ctx.request.body.data.guardian.lastName,
+                "email":ctx.request.body.data.guardian.email,
+                "mobileNumber":ctx.request.body.data.guardian.mobileNumber,
+                "relationship":ctx.request.body.data.guardian.relationship,
+            }
+        }
+        const guardianData = await strapi.service('api::guardian.guardian').create(guardian, {populate:'*'});
+        console.log("Guardian: ", guardianData);
+        console.log("Guardian ID: ", guardianData.id);
+        const applicant = {
+            "data":{
+                "firstName":ctx.request.body.data.applicant.firstName,
+                "middleName":ctx.request.body.data.applicant.middleName,
+                "lastName":ctx.request.body.data.applicant.lastName,
+                "personal_email":ctx.request.body.data.applicant.personal_email,
+                "gradeLevel":ctx.request.body.data.applicant.gradeLevel,
+                "branch":ctx.request.body.data.applicant.branch,
+                "institution":ctx.request.body.data.applicant.institution,
+                "gender":ctx.request.body.data.applicant.gender,
+                "lrn":ctx.request.body.data.applicant.lrn,
+                "religion":ctx.request.body.data.applicant.religion,
+                "birthDate": ctx.request.body.data.applicant.birthDate,
+                "address1": ctx.request.body.data.applicant.address1,
+                "address2": ctx.request.body.data.applicant.address2,
+                "city": ctx.request.body.data.applicant.city,
+                "province": ctx.request.body.data.applicant.province,
+                "zip": ctx.request.body.data.applicant.zip,
+                "twitter": ctx.request.body.data.applicant.twitter,
+                "facebook": ctx.request.body.data.applicant.facebook,
+                "instagram": ctx.request.body.data.applicant.instagram,
+                "payment_plan":ctx.request.body.data.applicant.payment_plan,
+                "guardians":[
+                    {
+                        id:guardianData.id
+                    }
+                ]
+            }
+        }
+        console.log("Applicant: ", applicant);
+        const applicantData = await strapi.service('api::applicant.applicant').create(applicant, {populate:'*'});
+        return applicantData;
     },
 
     findOne: async (ctx) => {

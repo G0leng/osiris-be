@@ -41,5 +41,10 @@ module.exports = {
             path: '/applicants/approve/:id',
             handler: 'applicant.approve',
           },
+          {
+            method: 'POST',
+            path: '/applicants/submit',
+            handler: 'applicant.submit',
+          },
     ]
 }
