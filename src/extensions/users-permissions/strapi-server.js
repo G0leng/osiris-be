@@ -164,10 +164,10 @@ module.exports = (plugin) => {
         data
       );
       strapi.plugins['email'].services.email.send({
-        to: data.email,
-        from: "support@headstartsolutionsph.com",
+        to: "gailesarmiento@gmail.com",
+        from: "gaile@thenerds.solutions",
         templateId:"d-8189fab8af8f4bedb04e6fb4212f1db6",
-        replyTo: "support@headstartsolutionsph.com", 
+        replyTo: "gaile@thenerds.solutions", 
         dynamic_template_data: {
           subject: "Osiris Registration",
           otp: 3100
