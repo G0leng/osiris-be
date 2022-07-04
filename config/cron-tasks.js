@@ -15,6 +15,7 @@ const sgMail = require("@sendgrid/mail");
     '*/1 * * * *': async() => {
       console.log('1 minute later');
       
+      /*
       const msg = {
         to: 'gailesarmiento@gmail.com', // Change to your recipient
         from: 'gaile@thenerds.solutions', // Change to your verified sender
@@ -22,28 +23,16 @@ const sgMail = require("@sendgrid/mail");
         text: 'and easy to do anywhere, even with Node.js',
         html: '<strong>and easy to do anywhere, even with Node.js</strong>',
       }
-      sgMail
-        .send(msg)
-        .then(() => {
-          console.log('Email sent')
-        })
-        .catch((error) => {
-          console.error(error)
-        })
+      sgMail.send(msg, (error, response) => {
+        if(error) {
+          console.log(error);
+        }
+        else{
+          console.log(response);
+        }
+      })
+      */
 /*
-      try {
-        /*
-        strapi.plugins['email'].services.email.send({
-            to:"gailesarmiento@gmail.com",
-            from: "gaile@thenerds.solutions",
-            templateId:"d-474c407ceeca4c67b1cccec29f6ed9be",
-            replyTo: "integration@thenerds.solutions", 
-            dynamic_template_data: {
-              subject: "OLK Registration",
-              name: "Gaile"
-            }
-        });
-        
         
         strapi.plugins['email'].services.email.send({
           to: "gailesarmiento@gmail.com",

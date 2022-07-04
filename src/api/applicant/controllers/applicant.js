@@ -25,6 +25,11 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
     },
 
     submit: async (ctx) => {
+        const paymentPlan = ctx.request.body.data.applicant.payment_plan;
+        console.log("Payment body: ",paymentPlan);
+        const payment = await strapi.service('api::payment-plan.payment-plan').find({filters:{paymentPlan:paymentPlan}, populate:'*'});
+        console.log("Payment Plan: ", payment.results[0].id);
+
         const guardian = {
             "data":{
                 "firstName":ctx.request.body.data.guardian.firstName,
@@ -35,6 +40,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
                 "relationship":ctx.request.body.data.guardian.relationship,
             }
         }
+        
         const guardianData = await strapi.service('api::guardian.guardian').create(guardian, {populate:'*'});
         console.log("Guardian: ", guardianData);
         console.log("Guardian ID: ", guardianData.id);
@@ -59,7 +65,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
                 "twitter": ctx.request.body.data.applicant.twitter,
                 "facebook": ctx.request.body.data.applicant.facebook,
                 "instagram": ctx.request.body.data.applicant.instagram,
-                "payment_plan":ctx.request.body.data.applicant.payment_plan,
+                "payment_plan":payment.results[0].id,
                 "guardians":[
                     {
                         id:guardianData.id
@@ -70,6 +76,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
         console.log("Applicant: ", applicant);
         const applicantData = await strapi.service('api::applicant.applicant').create(applicant, {populate:'*'});
         return applicantData;
+        
     },
 
     findOne: async (ctx) => {
