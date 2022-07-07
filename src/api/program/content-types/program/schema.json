@@ -22,6 +22,12 @@
     },
     "majorSpecialization": {
       "type": "string"
+    },
+    "fees": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fee.fee",
+      "inversedBy": "programs"
     }
   }
 }

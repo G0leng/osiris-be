@@ -130,6 +130,12 @@
       "relation": "manyToOne",
       "target": "api::section.section",
       "inversedBy": "students"
+    },
+    "discounts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::discount.discount",
+      "inversedBy": "students"
     }
   }
 }

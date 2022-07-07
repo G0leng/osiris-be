@@ -199,7 +199,7 @@ module.exports = createCoreController('api::applicant.applicant', ({strapi})=>({
                     "email": email,
                     "studentId": studentId,
                     "applicantId": id,
-                    "guardian": aData.guardian.id,
+                    "guardian": aData.guardians[0].id,
                     "institution": aData.institution.id,
                     "branch": aData.branch.id,
                     "payment_plan": aData.payment_plan.id,

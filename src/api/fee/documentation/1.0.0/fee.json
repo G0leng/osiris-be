@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/programs": {
+    "/fees": {
       "get": {
         "responses": {
           "200": {
@@ -20,19 +20,20 @@
                           "attributes": {
                             "type": "object",
                             "properties": {
-                              "programName": {
+                              "feeName": {
                                 "type": "string"
                               },
-                              "programCode": {
+                              "feeDescription": {
                                 "type": "string"
                               },
-                              "programDescription": {
+                              "feeClass": {
                                 "type": "string"
                               },
-                              "majorSpecialization": {
-                                "type": "string"
+                              "price": {
+                                "type": "number",
+                                "format": "float"
                               },
-                              "fees": {
+                              "programs": {
                                 "type": "object",
                                 "properties": {
                                   "data": {
@@ -46,20 +47,19 @@
                                         "attributes": {
                                           "type": "object",
                                           "properties": {
-                                            "feeName": {
+                                            "programName": {
                                               "type": "string"
                                             },
-                                            "feeDescription": {
+                                            "programCode": {
                                               "type": "string"
                                             },
-                                            "feeClass": {
+                                            "programDescription": {
                                               "type": "string"
                                             },
-                                            "price": {
-                                              "type": "number",
-                                              "format": "float"
+                                            "majorSpecialization": {
+                                              "type": "string"
                                             },
-                                            "programs": {
+                                            "fees": {
                                               "type": "object",
                                               "properties": {
                                                 "data": {
@@ -73,19 +73,20 @@
                                                       "attributes": {
                                                         "type": "object",
                                                         "properties": {
-                                                          "programName": {
+                                                          "feeName": {
                                                             "type": "string"
                                                           },
-                                                          "programCode": {
+                                                          "feeDescription": {
                                                             "type": "string"
                                                           },
-                                                          "programDescription": {
+                                                          "feeClass": {
                                                             "type": "string"
                                                           },
-                                                          "majorSpecialization": {
-                                                            "type": "string"
+                                                          "price": {
+                                                            "type": "number",
+                                                            "format": "float"
                                                           },
-                                                          "fees": {
+                                                          "programs": {
                                                             "type": "object",
                                                             "properties": {
                                                               "data": {
@@ -676,7 +677,7 @@
           }
         },
         "tags": [
-          "Program"
+          "Fee"
         ],
         "parameters": [
           {
@@ -760,7 +761,7 @@
             }
           }
         ],
-        "operationId": "get/programs"
+        "operationId": "get/fees"
       },
       "post": {
         "responses": {
@@ -779,19 +780,20 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "programName": {
+                            "feeName": {
                               "type": "string"
                             },
-                            "programCode": {
+                            "feeDescription": {
                               "type": "string"
                             },
-                            "programDescription": {
+                            "feeClass": {
                               "type": "string"
                             },
-                            "majorSpecialization": {
-                              "type": "string"
+                            "price": {
+                              "type": "number",
+                              "format": "float"
                             },
-                            "fees": {
+                            "programs": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -805,20 +807,19 @@
                                       "attributes": {
                                         "type": "object",
                                         "properties": {
-                                          "feeName": {
+                                          "programName": {
                                             "type": "string"
                                           },
-                                          "feeDescription": {
+                                          "programCode": {
                                             "type": "string"
                                           },
-                                          "feeClass": {
+                                          "programDescription": {
                                             "type": "string"
                                           },
-                                          "price": {
-                                            "type": "number",
-                                            "format": "float"
+                                          "majorSpecialization": {
+                                            "type": "string"
                                           },
-                                          "programs": {
+                                          "fees": {
                                             "type": "object",
                                             "properties": {
                                               "data": {
@@ -832,19 +833,20 @@
                                                     "attributes": {
                                                       "type": "object",
                                                       "properties": {
-                                                        "programName": {
+                                                        "feeName": {
                                                           "type": "string"
                                                         },
-                                                        "programCode": {
+                                                        "feeDescription": {
                                                           "type": "string"
                                                         },
-                                                        "programDescription": {
+                                                        "feeClass": {
                                                           "type": "string"
                                                         },
-                                                        "majorSpecialization": {
-                                                          "type": "string"
+                                                        "price": {
+                                                          "type": "number",
+                                                          "format": "float"
                                                         },
-                                                        "fees": {
+                                                        "programs": {
                                                           "type": "object",
                                                           "properties": {
                                                             "data": {
@@ -1414,10 +1416,10 @@
           }
         },
         "tags": [
-          "Program"
+          "Fee"
         ],
         "parameters": [],
-        "operationId": "post/programs",
+        "operationId": "post/fees",
         "requestBody": {
           "required": true,
           "content": {
@@ -1427,19 +1429,20 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "programName": {
+                      "feeName": {
                         "type": "string"
                       },
-                      "programCode": {
+                      "feeDescription": {
                         "type": "string"
                       },
-                      "programDescription": {
+                      "feeClass": {
                         "type": "string"
                       },
-                      "majorSpecialization": {
-                        "type": "string"
+                      "price": {
+                        "type": "number",
+                        "format": "float"
                       },
-                      "fees": {
+                      "programs": {
                         "type": "array",
                         "items": {
                           "oneOf": [
@@ -1492,7 +1495,7 @@
         }
       }
     },
-    "/programs/{id}": {
+    "/fees/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -1510,19 +1513,20 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "programName": {
+                            "feeName": {
                               "type": "string"
                             },
-                            "programCode": {
+                            "feeDescription": {
                               "type": "string"
                             },
-                            "programDescription": {
+                            "feeClass": {
                               "type": "string"
                             },
-                            "majorSpecialization": {
-                              "type": "string"
+                            "price": {
+                              "type": "number",
+                              "format": "float"
                             },
-                            "fees": {
+                            "programs": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -1536,20 +1540,19 @@
                                       "attributes": {
                                         "type": "object",
                                         "properties": {
-                                          "feeName": {
+                                          "programName": {
                                             "type": "string"
                                           },
-                                          "feeDescription": {
+                                          "programCode": {
                                             "type": "string"
                                           },
-                                          "feeClass": {
+                                          "programDescription": {
                                             "type": "string"
                                           },
-                                          "price": {
-                                            "type": "number",
-                                            "format": "float"
+                                          "majorSpecialization": {
+                                            "type": "string"
                                           },
-                                          "programs": {
+                                          "fees": {
                                             "type": "object",
                                             "properties": {
                                               "data": {
@@ -1563,19 +1566,20 @@
                                                     "attributes": {
                                                       "type": "object",
                                                       "properties": {
-                                                        "programName": {
+                                                        "feeName": {
                                                           "type": "string"
                                                         },
-                                                        "programCode": {
+                                                        "feeDescription": {
                                                           "type": "string"
                                                         },
-                                                        "programDescription": {
+                                                        "feeClass": {
                                                           "type": "string"
                                                         },
-                                                        "majorSpecialization": {
-                                                          "type": "string"
+                                                        "price": {
+                                                          "type": "number",
+                                                          "format": "float"
                                                         },
-                                                        "fees": {
+                                                        "programs": {
                                                           "type": "object",
                                                           "properties": {
                                                             "data": {
@@ -2145,7 +2149,7 @@
           }
         },
         "tags": [
-          "Program"
+          "Fee"
         ],
         "parameters": [
           {
@@ -2159,7 +2163,7 @@
             }
           }
         ],
-        "operationId": "get/programs/{id}"
+        "operationId": "get/fees/{id}"
       },
       "put": {
         "responses": {
@@ -2178,19 +2182,20 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "programName": {
+                            "feeName": {
                               "type": "string"
                             },
-                            "programCode": {
+                            "feeDescription": {
                               "type": "string"
                             },
-                            "programDescription": {
+                            "feeClass": {
                               "type": "string"
                             },
-                            "majorSpecialization": {
-                              "type": "string"
+                            "price": {
+                              "type": "number",
+                              "format": "float"
                             },
-                            "fees": {
+                            "programs": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -2204,20 +2209,19 @@
                                       "attributes": {
                                         "type": "object",
                                         "properties": {
-                                          "feeName": {
+                                          "programName": {
                                             "type": "string"
                                           },
-                                          "feeDescription": {
+                                          "programCode": {
                                             "type": "string"
                                           },
-                                          "feeClass": {
+                                          "programDescription": {
                                             "type": "string"
                                           },
-                                          "price": {
-                                            "type": "number",
-                                            "format": "float"
+                                          "majorSpecialization": {
+                                            "type": "string"
                                           },
-                                          "programs": {
+                                          "fees": {
                                             "type": "object",
                                             "properties": {
                                               "data": {
@@ -2231,19 +2235,20 @@
                                                     "attributes": {
                                                       "type": "object",
                                                       "properties": {
-                                                        "programName": {
+                                                        "feeName": {
                                                           "type": "string"
                                                         },
-                                                        "programCode": {
+                                                        "feeDescription": {
                                                           "type": "string"
                                                         },
-                                                        "programDescription": {
+                                                        "feeClass": {
                                                           "type": "string"
                                                         },
-                                                        "majorSpecialization": {
-                                                          "type": "string"
+                                                        "price": {
+                                                          "type": "number",
+                                                          "format": "float"
                                                         },
-                                                        "fees": {
+                                                        "programs": {
                                                           "type": "object",
                                                           "properties": {
                                                             "data": {
@@ -2813,7 +2818,7 @@
           }
         },
         "tags": [
-          "Program"
+          "Fee"
         ],
         "parameters": [
           {
@@ -2827,7 +2832,7 @@
             }
           }
         ],
-        "operationId": "put/programs/{id}",
+        "operationId": "put/fees/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -2837,19 +2842,20 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "programName": {
+                      "feeName": {
                         "type": "string"
                       },
-                      "programCode": {
+                      "feeDescription": {
                         "type": "string"
                       },
-                      "programDescription": {
+                      "feeClass": {
                         "type": "string"
                       },
-                      "majorSpecialization": {
-                        "type": "string"
+                      "price": {
+                        "type": "number",
+                        "format": "float"
                       },
-                      "fees": {
+                      "programs": {
                         "type": "array",
                         "items": {
                           "oneOf": [
@@ -3061,7 +3067,7 @@
           }
         },
         "tags": [
-          "Program"
+          "Fee"
         ],
         "parameters": [
           {
@@ -3075,7 +3081,7 @@
             }
           }
         ],
-        "operationId": "delete/programs/{id}"
+        "operationId": "delete/fees/{id}"
       }
     }
   }

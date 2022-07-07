@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/payment-plans": {
+    "/discounts": {
       "get": {
         "responses": {
           "200": {
@@ -20,23 +20,20 @@
                           "attributes": {
                             "type": "object",
                             "properties": {
-                              "paymentPlan": {
-                                "type": "string",
-                                "enum": [
-                                  "monthly",
-                                  "quarterly",
-                                  "semi",
-                                  "full"
-                                ]
+                              "discountName": {
+                                "type": "string"
                               },
-                              "frequency": {
-                                "type": "integer"
+                              "discountDescription": {
+                                "type": "string"
                               },
-                              "fee": {
+                              "discountClass": {
+                                "type": "string"
+                              },
+                              "price": {
                                 "type": "number",
                                 "format": "float"
                               },
-                              "miscellaneous": {
+                              "amount": {
                                 "type": "number",
                                 "format": "float"
                               },
@@ -5524,7 +5521,7 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Discount"
         ],
         "parameters": [
           {
@@ -5608,7 +5605,7 @@
             }
           }
         ],
-        "operationId": "get/payment-plans"
+        "operationId": "get/discounts"
       },
       "post": {
         "responses": {
@@ -5627,23 +5624,20 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "paymentPlan": {
-                              "type": "string",
-                              "enum": [
-                                "monthly",
-                                "quarterly",
-                                "semi",
-                                "full"
-                              ]
+                            "discountName": {
+                              "type": "string"
                             },
-                            "frequency": {
-                              "type": "integer"
+                            "discountDescription": {
+                              "type": "string"
                             },
-                            "fee": {
+                            "discountClass": {
+                              "type": "string"
+                            },
+                            "price": {
                               "type": "number",
                               "format": "float"
                             },
-                            "miscellaneous": {
+                            "amount": {
                               "type": "number",
                               "format": "float"
                             },
@@ -11110,10 +11104,10 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Discount"
         ],
         "parameters": [],
-        "operationId": "post/payment-plans",
+        "operationId": "post/discounts",
         "requestBody": {
           "required": true,
           "content": {
@@ -11123,23 +11117,20 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "paymentPlan": {
-                        "type": "string",
-                        "enum": [
-                          "monthly",
-                          "quarterly",
-                          "semi",
-                          "full"
-                        ]
+                      "discountName": {
+                        "type": "string"
                       },
-                      "frequency": {
-                        "type": "integer"
+                      "discountDescription": {
+                        "type": "string"
                       },
-                      "fee": {
+                      "discountClass": {
+                        "type": "string"
+                      },
+                      "price": {
                         "type": "number",
                         "format": "float"
                       },
-                      "miscellaneous": {
+                      "amount": {
                         "type": "number",
                         "format": "float"
                       },
@@ -11196,7 +11187,7 @@
         }
       }
     },
-    "/payment-plans/{id}": {
+    "/discounts/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -11214,23 +11205,20 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "paymentPlan": {
-                              "type": "string",
-                              "enum": [
-                                "monthly",
-                                "quarterly",
-                                "semi",
-                                "full"
-                              ]
+                            "discountName": {
+                              "type": "string"
                             },
-                            "frequency": {
-                              "type": "integer"
+                            "discountDescription": {
+                              "type": "string"
                             },
-                            "fee": {
+                            "discountClass": {
+                              "type": "string"
+                            },
+                            "price": {
                               "type": "number",
                               "format": "float"
                             },
-                            "miscellaneous": {
+                            "amount": {
                               "type": "number",
                               "format": "float"
                             },
@@ -16697,7 +16685,7 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Discount"
         ],
         "parameters": [
           {
@@ -16711,7 +16699,7 @@
             }
           }
         ],
-        "operationId": "get/payment-plans/{id}"
+        "operationId": "get/discounts/{id}"
       },
       "put": {
         "responses": {
@@ -16730,23 +16718,20 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "paymentPlan": {
-                              "type": "string",
-                              "enum": [
-                                "monthly",
-                                "quarterly",
-                                "semi",
-                                "full"
-                              ]
+                            "discountName": {
+                              "type": "string"
                             },
-                            "frequency": {
-                              "type": "integer"
+                            "discountDescription": {
+                              "type": "string"
                             },
-                            "fee": {
+                            "discountClass": {
+                              "type": "string"
+                            },
+                            "price": {
                               "type": "number",
                               "format": "float"
                             },
-                            "miscellaneous": {
+                            "amount": {
                               "type": "number",
                               "format": "float"
                             },
@@ -22213,7 +22198,7 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Discount"
         ],
         "parameters": [
           {
@@ -22227,7 +22212,7 @@
             }
           }
         ],
-        "operationId": "put/payment-plans/{id}",
+        "operationId": "put/discounts/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -22237,23 +22222,20 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "paymentPlan": {
-                        "type": "string",
-                        "enum": [
-                          "monthly",
-                          "quarterly",
-                          "semi",
-                          "full"
-                        ]
+                      "discountName": {
+                        "type": "string"
                       },
-                      "frequency": {
-                        "type": "integer"
+                      "discountDescription": {
+                        "type": "string"
                       },
-                      "fee": {
+                      "discountClass": {
+                        "type": "string"
+                      },
+                      "price": {
                         "type": "number",
                         "format": "float"
                       },
-                      "miscellaneous": {
+                      "amount": {
                         "type": "number",
                         "format": "float"
                       },
@@ -22469,7 +22451,7 @@
           }
         },
         "tags": [
-          "Payment-plan"
+          "Discount"
         ],
         "parameters": [
           {
@@ -22483,7 +22465,7 @@
             }
           }
         ],
-        "operationId": "delete/payment-plans/{id}"
+        "operationId": "delete/discounts/{id}"
       }
     }
   }

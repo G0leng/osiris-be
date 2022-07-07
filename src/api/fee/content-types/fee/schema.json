@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fees",
+  "info": {
+    "singularName": "fee",
+    "pluralName": "fees",
+    "displayName": "fee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "feeName": {
+      "type": "string"
+    },
+    "feeDescription": {
+      "type": "text"
+    },
+    "feeClass": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "programs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::program.program",
+      "inversedBy": "fees"
+    }
+  }
+}
