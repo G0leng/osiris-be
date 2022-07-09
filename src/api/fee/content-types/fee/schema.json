@@ -12,23 +12,76 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "feeCode": {
+      "type": "string"
+    },
     "feeName": {
       "type": "string"
     },
     "feeDescription": {
       "type": "text"
     },
-    "feeClass": {
-      "type": "string"
+    "account": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::chart-of-account.chart-of-account"
     },
-    "price": {
-      "type": "decimal"
+    "contraAccount": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::chart-of-account.chart-of-account"
+    },
+    "feeClass": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "miscellaneous",
+        "laboratory-fee",
+        "tuition-computation",
+        "tuition-laboratory",
+        "other-fees",
+        "technical-fees",
+        "projects",
+        "tuition"
+      ]
+    },
+    "feeType": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "contact-hours",
+        "credit-units",
+        "fixed",
+        "hours",
+        "lab-units",
+        "others",
+        "subject",
+        "units"
+      ]
     },
     "programs": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::program.program",
       "inversedBy": "fees"
+    },
+    "sequence": {
+      "type": "integer"
+    },
+    "categoryCode1": {
+      "type": "string"
+    },
+    "categoryCode2": {
+      "type": "string"
+    },
+    "categoryCode3": {
+      "type": "string"
+    },
+    "categoryCode4": {
+      "type": "string"
+    },
+    "categoryCode5": {
+      "type": "string"
     }
   }
 }

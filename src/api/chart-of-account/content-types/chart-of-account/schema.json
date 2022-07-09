@@ -1,0 +1,124 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chart_of_accounts",
+  "info": {
+    "singularName": "chart-of-account",
+    "pluralName": "chart-of-accounts",
+    "displayName": "chartOfAccount"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accountCode": {
+      "type": "string"
+    },
+    "account": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "accountClass": {
+      "type": "enumeration",
+      "enum": [
+        "asset",
+        "liability",
+        "equity",
+        "revenue",
+        "expense",
+        "income"
+      ]
+    },
+    "levelOfDetail": {
+      "type": "integer"
+    },
+    "allowPosting": {
+      "type": "boolean"
+    },
+    "subledger": {
+      "type": "enumeration",
+      "enum": [
+        "accrued-expenses",
+        "accumulated-depreciation",
+        "advances-to-intercompany-account",
+        "building-and-building-improvement",
+        "communication-expenses",
+        "contracted-services",
+        "cost-of-auxillary-enterprises",
+        "cost-of-misc-student-requirements",
+        "depreciation-amortization-and-provisions",
+        "donations-and-contributions",
+        "due-to-or-from-other-funds",
+        "fund-assets",
+        "fund-liabilities",
+        "furniture-and-fixtures",
+        "ict-equipment",
+        "income-from-auxillary-enterprise",
+        "land",
+        "long-term-debts",
+        "notes-payable",
+        "other-current-assets",
+        "other-current-liabilities",
+        "other-equipment",
+        "other-expenses",
+        "other-income",
+        "other-non-current-assets",
+        "other-non-current-liab",
+        "other-operating-expenses",
+        "personnel-expenses",
+        "power-light-and-water",
+        "prepaid-expenses",
+        "prior-year-adjustments",
+        "profit-and-loss-summary",
+        "receivables",
+        "remittances-payable",
+        "repairs-and-maintenance",
+        "scholarship-grants-fee-discounts-and-refunds",
+        "short-term-investments",
+        "supplies-expenses",
+        "swimming-pool",
+        "transportation-and-travel",
+        "transportation-equipment",
+        "accounts-payable",
+        "accounts-receivable",
+        "operating-income",
+        "operation-income",
+        "assets",
+        "cash-advances",
+        "cash",
+        "cheque",
+        "credit-card",
+        "deferred-revenue",
+        "deposit-slip",
+        "employee-deduction",
+        "equity",
+        "expense",
+        "fixed-assets",
+        "inventory",
+        "liabilities",
+        "priveleges",
+        "revenue",
+        "scholarship-government",
+        "scholarships-private",
+        "scholarship-receivable"
+      ]
+    },
+    "categoryCode1": {
+      "type": "string"
+    },
+    "categoryCode2": {
+      "type": "string"
+    },
+    "categoryCode3": {
+      "type": "string"
+    },
+    "categoryCode4": {
+      "type": "string"
+    },
+    "categoryCode5": {
+      "type": "string"
+    }
+  }
+}
